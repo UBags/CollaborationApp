@@ -43,10 +43,6 @@
         tools:targetApi="31"
         >
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBwLAyTQseFs6sQNOcPYW5IUUb0hAWVgWE" />
-
         <!-- NEW: Declare TimetableDetailsActivity -->
         <activity android:name=".timetable.TimetableDetailsActivity" />
 
