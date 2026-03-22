@@ -1,5 +1,8 @@
 package com.costheta.cortexa.data.models
 
+// Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+// See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 

@@ -1,6 +1,9 @@
 // Path: app/src/main/java/com/example/cortexa/data/model/Attachment.kt
 package com.costheta.cortexa.data.models // Confirming package
 
+// Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+// See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.LocalDateTime

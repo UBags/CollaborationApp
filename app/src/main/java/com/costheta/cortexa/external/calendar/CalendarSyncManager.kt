@@ -1,5 +1,8 @@
 package com.costheta.cortexa.external.calendar
 
+// Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+// See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 import android.Manifest
 import android.content.ContentResolver
 import android.content.Context

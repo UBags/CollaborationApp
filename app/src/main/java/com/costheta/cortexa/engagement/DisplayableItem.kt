@@ -1,5 +1,8 @@
 package com.costheta.cortexa.engagement
 
+// Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+// See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 import com.costheta.cortexa.data.models.Engagement
 import com.costheta.cortexa.data.models.SyncedCalendarEvent
 import java.time.LocalDateTime

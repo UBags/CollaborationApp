@@ -1,5 +1,8 @@
 package com.costheta.cortexa.util.image2pdf
 
+// Copyright (c) 2025 Uddipan Bagchi. All rights reserved.
+// See LICENSE in the project root for license information.package com.costheta.cortexa.action
+
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
