@@ -1,0 +1,118 @@
+[versions]
+agp = "8.12.2"
+kotlin = "2.2.10"
+# ADD a version for the KSP plugin
+ksp = "2.2.10-2.0.2"
+coreKtx = "1.17.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+constraintlayout = "2.2.1"
+activity = "1.10.1"
+lifecycleRuntimeKtx = "2.9.3"
+roomKtx = "2.7.2"
+coroutines = "1.10.2"
+junit = "4.13.2"
+androidxJunit = "1.3.0"
+espressoCore = "3.7.0"
+workRuntimeKtx = "2.10.3"
+poiOoxml = "5.4.1"
+
+# Updated and new versions for ML Kit and CameraX
+camerax = "1.4.2"
+mlkitLanguageId = "17.0.6"
+
+# Standalone Text Recognition Libraries now use version 16.0.0
+mlkitTextRecognition = "16.0.1"
+mlkitTextRecognitionChinese = "16.0.1"
+mlkitTextRecognitionDevanagari = "16.0.1"
+mlkitTextRecognitionJapanese = "16.0.1"
+mlkitTextRecognitionKorean = "16.0.1"
+
+# Other versions from your original file
+azureIdentity = "1.17.0"
+boxAndroidSdk = "5.0.0"
+desugar_jdk_libs = "2.1.5"
+dropboxCoreSdkVersion = "7.0.0"
+emoji2 = "1.5.0"
+fragment = "1.8.9"
+fuzzywuzzyVersion = "1.4.0"
+googleApiClientAndroid = "2.8.1"
+googleApiServicesDrive = "v3-rev20250819-2.0.0"
+googleAuthLibraryOauth2Http = "1.39.0"
+microsoftGraph = "6.51.0"
+msal = "7.0.3"
+playServicesAuth = "21.4.0"
+playServicesMaps = "19.2.0"
+
+[libraries]
+# AndroidX Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+androidx-fragment = { module = "androidx.fragment:fragment", version.ref = "fragment" }
+
+# Room
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+
+# Coroutines
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Lifecycle
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# CameraX
+androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "camerax" }
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
+
+# ML Kit (Standalone)
+mlkit-language-id = { group = "com.google.mlkit", name = "language-id", version.ref = "mlkitLanguageId" }
+mlkit-text-recognition = { group = "com.google.mlkit", name = "text-recognition", version.ref = "mlkitTextRecognition" }
+mlkit-text-recognition-chinese = { group = "com.google.mlkit", name = "text-recognition-chinese", version.ref = "mlkitTextRecognitionChinese" }
+mlkit-text-recognition-devanagari = { group = "com.google.mlkit", name = "text-recognition-devanagari", version.ref = "mlkitTextRecognitionDevanagari" }
+mlkit-text-recognition-japanese = { group = "com.google.mlkit", name = "text-recognition-japanese", version.ref = "mlkitTextRecognitionJapanese" }
+mlkit-text-recognition-korean = { group = "com.google.mlkit", name = "text-recognition-korean", version.ref = "mlkitTextRecognitionKorean" }
+
+# WorkManager
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
+
+# Apache POI
+poi-ooxml = { module = "org.apache.poi:poi-ooxml", version.ref = "poiOoxml" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidxJunit" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+
+# Other libraries from your original file
+desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+androidx-emoji2 = { module = "androidx.emoji2:emoji2", version.ref = "emoji2" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+google-api-client-android = { module = "com.google.api-client:google-api-client-android", version.ref = "googleApiClientAndroid" }
+google-api-services-drive = { module = "com.google.apis:google-api-services-drive", version.ref = "googleApiServicesDrive" }
+google-auth-library-oauth2-http = { module = "com.google.auth:google-auth-library-oauth2-http", version.ref = "googleAuthLibraryOauth2Http" }
+dropbox-core-sdk = { module = "com.dropbox.core:dropbox-core-sdk", version.ref = "dropboxCoreSdkVersion" }
+microsoft-graph = { module = "com.microsoft.graph:microsoft-graph", version.ref = "microsoftGraph" }
+box-android-sdk = { module = "com.box:box-android-sdk", version.ref = "boxAndroidSdk" }
+msal = { module = "com.microsoft.identity.client:msal", version.ref = "msal" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+xdrop-fuzzywuzzy = { module = "me.xdrop:fuzzywuzzy", version.ref = "fuzzywuzzyVersion" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+# REMOVE the old kapt plugin
+# kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+# ADD the new KSP plugin
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+

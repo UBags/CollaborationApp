@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_vert"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/menu_button_description"
+        android:padding="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/timetableSignInLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView">
+
+        <Button
+            android:id="@+id/googleSignInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_with_google_to_sync" />
+
+        <TextView
+            android:id="@+id/signedInUserTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:text="Signed in as: user@example.com" />
+
+        <Button
+            android:id="@+id/signOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- New Horizontal Layout for Timetable Actions -->
+    <LinearLayout
+        android:id="@+id/timetableActionsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timetableSignInLayout">
+
+        <Button
+            android:id="@+id/uploadAcademicTimetableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45"
+            android:text="@string/academic_timetable_button_text"
+            android:gravity="center_vertical|center_horizontal"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@null"
+            app:iconSize="30dp"
+            app:iconGravity="textEnd"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/uploadPersonalTimetableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45"
+            android:text="@string/personal_timetable_button_text"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@null"
+            app:iconSize="30dp"
+            android:gravity="center_vertical|center_horizontal"
+            app:iconGravity="textEnd"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/viewTimetablesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            app:icon="@drawable/ic_eye"
+            app:iconTint="@null"
+            app:iconSize="30dp"
+            android:gravity="center_horizontal"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+
+    <!-- Buttons for Assignments -->
+    <LinearLayout
+        android:id="@+id/assignmentButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timetableActionsLayout">
+
+        <Button
+            android:id="@+id/addAssignmentButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_assignment_button_text"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/viewAssignmentsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/view_assignments_button_text"
+            android:layout_marginStart="8dp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- Exam Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/examButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assignmentButtonsLayout">
+
+        <Button
+            android:id="@+id/addExamButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_exam_button_text"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/viewExamsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/view_exams_button_text"
+            android:layout_marginStart="8dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- To-Do Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/todoButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/examButtonsLayout">
+
+        <Button
+            android:id="@+id/addTodoButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_todo_button_text"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/viewTodosButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/view_todos_button_text"
+            android:layout_marginStart="8dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- Notes Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/notesButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todoButtonsLayout">
+
+        <Button
+            android:id="@+id/addNoteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/upload_notes_button_text"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/viewNotesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/view_notes_button_text"
+            android:layout_marginStart="8dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- Engagement Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/engagementButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notesButtonsLayout">
+
+        <Button
+            android:id="@+id/addEngagementButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_engagement_button_text"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/viewEngagementsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/view_engagements_button_text"
+            android:layout_marginStart="8dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/actionButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/engagementButtonsLayout">
+
+        <Button
+            android:id="@+id/addActionButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_action_button_text"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/viewActionsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/view_actions_button_text"
+            android:layout_marginStart="8dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- The RecyclerView is now removed from this layout -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

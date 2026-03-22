@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="attachment_string_attachments_label">Attachments</string>
+    <string name="attachment_string_add_attachment_button_text">Add Attachment</string>
+    <string name="attachment_string_pick_file_button_text">Pick File (Document/Image/Audio)</string>
+    <string name="attachment_string_take_photo_video_button_text">Take Photo/Video</string>
+    <string name="attachment_string_record_audio_button_text">Record Audio</string>
+    <string name="attachment_string_add_hyperlink_button_text">Add Hyperlink</string>
+
+    <string name="attachment_string_attachment_title_hint">Attachment Name (Optional)</string>
+    <string name="attachment_string_enter_hyperlink_hint">Enter URL (e.g., https://example.com)</string>
+    <string name="attachment_string_confirm_add_hyperlink">Add</string>
+    <string name="attachment_string_cancel_add_hyperlink">Cancel</string>
+    <string name="attachment_string_error_invalid_url">Please enter a valid URL.</string>
+    <string name="attachment_string_attachment_added_success">Attachment added successfully.</string>
+    <string name="attachment_string_attachment_delete_success">Attachment deleted.</string>
+    <string name="attachment_string_attachment_delete_failure">Failed to delete attachment: %1$s</string>
+    <string name="attachment_string_error_no_viewer_found">No app found to open this file type.</string>
+    <string name="attachment_string_error_file_not_found">File not found or access denied.</string>
+    <string name="attachment_string_attachment_deleted_dialog_title">Delete Attachment?</string>
+    <string name="attachment_string_attachment_deleted_dialog_message">Are you sure you want to delete this attachment?</string>
+    <string name="attachment_string_attachment_image_content_description">Attached Image</string>
+    <string name="attachment_string_attachment_document_content_description">Attached Document</string>
+    <string name="attachment_string_attachment_audio_content_description">Attached Audio</string>
+    <string name="attachment_string_attachment_video_content_description">Attached Video</string>
+    <string name="attachment_string_attachment_hyperlink_content_description">Attached Hyperlink</string>
+    <string name="attachment_string_attachments_title">Attachments</string>
+    <string name="attachment_string_no_attachments_found">No attachments added yet</string>
+    <string name="attachment_string_attachment_permission_needed_title">Permission Needed</string>
+    <string name="attachment_string_attachment_permission_needed_message">Please grant the necessary permissions to use this feature.</string>
+    <string name="attachment_string_attachment_permission_denied_message">Permission denied. Cannot perform this action.</string>
+    <string name="attachment_string_attachment_add_failure">Could not add attachment due to %1$s</string>
+    <string name="attachment_string_email_attachments_button_text">Mail Attachments</string>
+    <string name="attachment_string_dialog_attachment_name_title">Name the Attachment</string>
+    <string name="attachment_string_dialog_attachment_name_message">Please provide a name for this attachment:</string>
+    <string name="attachment_string_dialog_attachment_name_hint">Attachment Name</string>
+    <string name="attachment_string_dialog_attachment_name_positive">Save</string>
+    <string name="attachment_string_dialog_attachment_name_negative">Cancel</string>
+
+    <string name="attachment_string_audio_recording_failed_cancelled">Cancelling because audio recording failed</string>
+    <string name="attachment_string_audio_recording_cancelled">Audio recording cancelled</string>
+    <string name="attachment_string_photo_capture_cancelled_failed">Failed because photo capture cancelled</string>
+    <string name="attachment_string_video_capture_cancelled_failed">Failed because video capture cancelled</string>
+    <string name="attachment_string_attachment_name_cannot_be_empty">Attachment name cannot be empty</string>
+    <string name="attachment_string_attachment_add_cancelled">Adding attachment cancelled\n</string>
+    <string name="attachment_string_could_not_view_file_invalid_path">Invalid file path %1$s. Cannot view file.</string>
+    <string name="attachment_string_file_not_found_skipping">Skipping. Could not find file %1$s.</string>
+    <string name="attachment_string_permission_denied_for_file_skipping">Skipping. Permission denied for %1$s\n</string>
+    <string name="attachment_string_invalid_file_path_skipping">Skipping. Invalid file path for %1$s</string>
+    <string name="attachment_string_could_not_attach_file_skipping">Skipping. Could not attach file %1$s</string>
+    <string name="attachment_string_send_attachments_via_email">Mail attachments</string>
+    <string name="attachment_string_no_email_app_found">No email app found</string>
+    <string name="attachment_string_no_email_app_found_to_send_attachment">No email app found for sending attachments</string>
+    <string name="attachment_string_no_attachments_to_send">No attachments to send</string>
+    <string name="attachment_string_select_a_file">Select a file</string>
+    <string name="attachment_string_take_photo">Take photo</string>
+    <string name="attachment_string_record_video">Record video</string>
+    <string name="attachment_string_choose_action">Choose Action</string>
+    <string name="attachment_string_error_creating_file">Error creating file %1$s</string>
+    <string name="attachment_string_failed_to_make_file_persistent">Failed to save file</string>
+    <string name="attachment_string_failed_to_make_file_persistent_cannot_save">Cannot save because failed to make file persistent</string>
+    <string name="attachment_string_failed_to_attach_file_permission">Did not attach %1$s due to failed File Permissions</string>
+
+</resources>

@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CORTEXA</string>
+    <string name="main_title">My Scheduler</string>
+    <string name="cortexa_folder_name">cortexa</string>
+    <string name="upload_timetable_button_text">Upload Lecture/Lab/Tutorial Timetable</string>
+    <string name="upload_personal_timetable_button_text">Upload Personal Timetable</string>
+    <string name="add_engagement_button_text">Add Engagement/Meeting</string>
+    <string name="add_exam_button_text">Add Exam</string>
+    <string name="add_assignment_button_text">Add Assignment/Deliverable/WorkItem</string>
+    <string name="status_initial_text">No timetable uploaded yet.</string>
+    <string name="add_engagement_fab_description">Add Engagement/Meeting</string>
+    <string name="add_engagement_button_clicked">Add Engagement / Meeting button clicked!</string>
+
+    <!-- NEW: Content description for the 3-dot menu button -->
+    <string name="menu_button_description">More options menu</string>
+
+    <!-- Strings for Timetable Validity Dialog -->
+    <string name="dialog_timetable_validity_title">Timetable Details</string>
+    <string name="dialog_timetable_name_label">Timetable Name:</string>
+    <string name="dialog_timetable_name_hint">e.g., Fall 2025 Semester</string>
+    <string name="dialog_start_date_label">Start Date (Validity):</string>
+    <string name="dialog_start_date_hint">Start Date</string>
+    <string name="dialog_end_date_label">End Date (Validity):</string>
+    <string name="dialog_end_date_hint">End Date</string>
+    <string name="dialog_ok_button">OK</string>
+    <string name="dialog_cancel_button">Cancel</string>
+    <string name="dialog_validation_error">Please fill in all required fields.</string>
+    <string name="timetable_details_saved">Timetable details saved successfully!</string>
+    <string name="timetable_details_save_error">Failed to save timetable details: %1$s</string>
+
+    <!-- Strings for CSV Upload -->
+    <string name="status_timetable_uploaded">Timetable uploaded: %1$s</string>
+    <string name="status_upload_failed">Timetable upload failed.</string>
+    <string name="status_parse_failed">Error parsing CSV file.</string>
+    <string name="status_upload_cancelled">Timetable upload cancelled.</string>
+    <string name="timetable_uploaded_success">Timetable imported successfully!</string>
+    <string name="timetable_upload_failure">Failed to import timetable: %1$s</string>
+    <string name="timetable_parse_error">Error parsing timetable CSV: %1$s</string>
+
+    <!-- Strings for Engagement / Meeting -->
+    <string name="add_engagement_title">Add Engagement / Meeting</string>
+    <string name="edit_engagement_title">Edit Engagement / Meeting</string>
+    <string name="update_engagement_button_text">Update Engagement/Meeting</string>
+    <string name="engagement_name_label">Engagement/Meeting Name:</string>
+    <string name="engagement_name_hint">e.g., Team Meeting, Doctor Appointment</string>
+    <string name="engagement_start_time_label">Start Time:</string>
+    <string name="engagement_start_time_hint">Start Time</string>
+    <string name="engagement_duration_label">Duration:</string>
+    <string name="engagement_duration_minutes_label">%1$d minutes</string>
+    <string name="engagement_notes_label">Notes (Optional):</string>
+    <string name="notes_hint">Any additional details about the engagement</string>
+    <string name="save_engagement_button_text">Save Engagement/Meeting</string>
+    <string name="engagement_save_success">Engagement/Meeting saved successfully!</string>
+    <string name="engagement_update_success">Engagement/Meeting updated successfully!</string>
+    <string name="engagement_save_failure">Failed to save engagement: %1$s</string>
+    <string name="engagement_update_failure">Failed to update engagement: %1$s</string>
+    <string name="engagement_validation_error">Please fill in all required fields for the engagement.</string>
+    <string name="engagement_duration_error">Duration must be greater than 0.</string>
+    <string name="engagement_load_failure">Failed to load engagement details.</string>
+    <string name="engagement_load_failure_error">Failed to load engagement details: %1$s</string>
+    <string name="engagement_deleted_success">Engagement/Meeting %1$s deleted successfully!</string>
+    <string name="engagement_deletion_failure">Failed to delete engagement: %1$s</string>
+    <string name="engagement_validity_label">Validity Period:</string>
+    <string name="engagement_day_selection_type_label">How often does this engagement occur?</string>
+    <string name="radio_select_days">On specific days of the week</string>
+    <string name="radio_recurrence">Recur every N days</string>
+    <string name="radio_daily">Daily</string>
+    <string name="recurrence_interval_label">Recur every:</string>
+    <string name="recurrence_days_label">days</string>
+    <string name="error_invalid_time_format">Invalid time format. Please use HH:mm.</string>
+    <string name="error_invalid_date_format">Invalid date format. Please use YYYY-MM-DD.</string>
+    <string name="error_end_date_before_start_date">End date cannot be before start date.</string>
+    <string name="error_select_at_least_one_day">Please select at least one day of the week.</string>
+    <string name="error_select_day_selection_type">Please select how often this engagement occurs.</string>
+    <string name="engagement_validity_format">Valid: %1$s to %2$s</string>
+    <string name="engagement_recurrence_format">Every %1$d days</string>
+    <string name="engagement_daily_label">Daily</string>
+    <string name="engagement_time_format">%1$s - %2$s</string>
+
+    <!-- Strings for Timetable Details Activity -->
+    <string name="class_sessions_header">Class Sessions</string>
+    <string name="timetable_validity_format">Valid: %1$s to %2$s</string>
+    <string name="notification_offset_dialog_title">Set Notification Offset</string>
+    <string name="notification_offset_minutes_label">Minutes before session:</string>
+    <string name="notification_offset_save_success">Notification offset saved.</string>
+    <string name="notification_offset_save_failure">Failed to save notification offset: %1$s</string>
+    <string name="notifications_silenced_for_timetable">Notifications silenced for %1$s</string>
+    <string name="notifications_unsilenced_for_timetable">Notifications unsilenced for %1$s</string>
+    <string name="notifications_silenced_for_session">Notifications silenced for %1$s for\ntimeslot %2$s to %3$s</string>
+    <string name="notifications_unsilenced_for_session">Notifications unsilenced for %1$s for\ntimeslot %2$s to %3$s</string>
+    <string name="default_notif_1_offset_label">Default Notification 1 Offset (minutes before):</string>
+    <string name="default_notif_2_offset_label">Default Notification 2 Offset (minutes before):</string>
+    <string name="default_notif_offset_hint">e.g., 30</string>
+    <string name="silence_notifications_label">Silence Notifications for this Engagement/Meeting</string>
+    <string name="silence_all_notifications_for_timetable">Silence Notifications for this Timetable</string>
+    <string name="timetable_type_label">Timetable Type:</string>
+    <string name="radio_lecture">Lecture/Lab/Tutorial</string>
+    <string name="radio_personal">Personal/Other</string>
+
+    <!-- Strings for Assignment List Activity -->
+    <string name="view_assignments_button_text">View Assignment/Deliverable/WorkItems</string>
+    <string name="add_assignment_title">Add Assignment/Deliverable/WorkItem</string>
+    <string name="edit_assignment_title">Edit Assignment/Deliverable/WorkItem</string>
+    <string name="update_assignment_button_text">Update Assignment/Deliverable/WorkItem</string>
+    <string name="assignment_validation_error">Please fill in all assignment details.</string>
+    <string name="assignment_estimated_time_error">Estimated time must be greater than 0.</string>
+    <string name="assignment_course_name_label">Course Name:</string>
+    <string name="assignment_course_name_hint">Subject/Project:Physics,Biology,History,Project X</string>
+    <string name="assignment_name_label">Assignment/Deliverable/WorkItem Name:</string>
+    <string name="assignment_name_hint">Name:DC Motors,Wireframe,Anatomy Project</string>
+    <string name="assignment_due_date_label">Due Date:</string>
+    <string name="assignment_due_date_hint">Due Date</string>
+    <string name="assignment_submission_time_label">Submission Time:</string>
+    <string name="assignment_submission_time_hint">Submission Time</string>
+    <string name="assignment_estimated_time_label">Estimated Time to Complete:</string>
+    <string name="assignment_estimated_hours_label">hours</string>
+    <string name="assignment_estimated_minutes_label">minutes</string>
+    <string name="assignment_current_progress_label">Current Progress: </string>
+    <string name="assignment_save_button_text">Save Assignment/Deliverable/WorkItem</string>
+    <string name="assignment_save_success">Assignment/Deliverable/WorkItem saved successfully!</string>
+    <string name="assignment_update_success">Assignment/Deliverable/WorkItem updated successfully!</string>
+    <string name="assignment_save_failure">Failed to save assignment: %1$s</string>
+    <string name="assignment_update_failure">Failed to update assignment: %1$s</string>
+    <string name="assignment_delete_failure">Failed to delete assignment: %1$s</string>
+    <string name="assignment_delete_failure_error">Failed to delete assignment: %1$s</string>
+    <string name="confirm_delete_title">Confirm Deletion</string>
+    <string name="confirm_delete_assignment_message">Are you sure you want to delete assignment %1$s\nof subject %2$s due on %3$s?\nThis cannot be undone.</string>
+    <string name="no_assignments_found">No assignments found.</string>
+    <string name="assignment_deleted_success">Assignment/Deliverable/WorkItem "%1$s" deleted successfully!</string>
+    <string name="assignment_deletion_failure">Failed to delete assignment: %1$s</string>
+    <string name="assignment_course_format">Course: %1$s</string>
+    <string name="assignment_due_date_format">Due: %1$s %2$s</string>
+    <string name="assignment_due_date_time_format">Due: %1$s at %2$s</string>
+    <string name="assignment_estimated_days_format">Est. %1$.1f days</string>
+    <string name="assignment_current_progress_format">Progress :</string>
+    <string name="assignment_hours_left_format">Time Left :</string>
+    <string name="assignment_days_left_format">Time Left : %1$.1f days</string>
+    <string name="assignment_overdue">OVERDUE!</string>
+    <string name="assignment_under_progress">Under Progress</string>
+    <string name="assignment_completed">Completed</string>
+    <string name="assignment_not_started">Not Started</string>
+    <string name="assignment_estimated_days_label">days</string>
+    <string name="assignment_update_button_text">Update Assignment/Deliverable/WorkItem</string>
+
+
+    <!-- Strings for Exam List Activity -->
+    <string name="view_exams_button_text">View Exams</string>
+    <string name="add_exam_title">Add Exam</string>
+    <string name="edit_exam_title">Edit Exam</string>
+    <string name="update_exam_button_text">Update Exam</string>
+    <string name="exam_validation_error">Please fill in all exam details.\nIf venue is not known, put TBD\n or To Be Decided</string>
+    <string name="exam_time_order_error">Exam start time must be before end time.</string>
+    <string name="exam_course_name_label">Course Name:</string>
+    <string name="exam_course_name_hint">Course e.g. Physics, EE101</string>
+    <string name="exam_date_label">Exam Date:</string>
+    <string name="exam_date_hint">Exam Date</string>
+    <string name="exam_start_time_label">Start Time:</string>
+    <string name="exam_start_time_hint">Start Time</string>
+    <string name="exam_end_time_label">End Time:</string>
+    <string name="exam_end_time_hint">End Time</string>
+    <string name="exam_venue_label">Venue:</string>
+    <string name="exam_venue_hint">Exam Venue e.g. Hall 1</string>
+    <string name="exam_save_button_text">Save Exam</string>
+    <string name="exam_save_success">Exam saved successfully!</string>
+    <string name="exam_update_success">Exam updated successfully!</string>
+    <string name="exam_save_failure">Failed to save exam: %1$s</string>
+    <string name="exam_update_failure">Failed to update exam: %1$s</string>
+    <string name="no_exams_found">No exams found.</string>
+    <string name="exam_deleted_success">Exam \"%1$s\" deleted successfully!</string>
+    <string name="exam_deletion_failure">Failed to delete exam: %1$s</string>
+    <string name="exam_date_format">Date: %1$s</string>
+    <string name="exam_time_format">Time: %1$s - %2$s</string>
+    <string name="exam_venue_format">Venue: %1$s</string>
+    <string name="exam_hours_left_format">Time Left: %1$.2f hours</string>
+    <string name="exam_days_left_format">Time Left: %1$.1f days</string>
+    <string name="exam_update_button_text">Update Exam</string>
+
+    <!-- Strings for Clash Detection Activity -->
+    <string name="clash_detection_title">Clash Detection</string>
+    <string name="clash_detection_title_for_date">Clashes for %1$s</string>
+    <string name="clash_text_summary">Clash (%1$d events)</string>
+    <string name="clash_details_title">Clash Details</string>
+    <string name="clash_detection_error">Error loading clashes: %1$s</string>
+    <string name="clash_details_format_lecture_short">Lecture</string>
+    <string name="clash_details_format_personal_short">Personal</string>
+    <string name="clash_details_format_engagement_short">Engagement</string>
+    <string name="clash_details_format_exam_short">Exam</string>
+
+    <!-- Strings for Schedule View Activity -->
+    <string name="schedule_view_title">Daily Schedule</string>
+    <string name="schedule_view_title_for_date">Schedule for %1$s</string>
+    <string name="event_details_title">Event Details</string>
+    <string name="schedule_view_error">Error loading schedule: %1$s</string>
+    <string name="no_events_found_for_day">No events found for this day.</string>
+    <string name="schedule_format_lecture_short">Lecture</string>
+    <string name="schedule_format_personal_short">Personal</string>
+    <string name="schedule_format_engagement_short">Engagement</string>
+    <string name="schedule_format_exam_short">Exam</string>
+
+    <!-- Generic Confirmation Dialog -->
+    <string name="confirm_deletion_title">Confirm Deletion</string>
+    <string name="confirm_deletion_message_single">Are you sure you want to delete \"%1$s\"?</string>
+    <string name="confirm_deletion_message_multiple">Are you sure you want to delete %1$d\nselected timetables?</string>
+    <string name="button_delete">Delete</string>
+
+    <!-- Timetable Archival/Deletion Dialog -->
+    <string name="dialog_archive_delete_message">What would you like to do with\nthis timetable?</string>
+    <string name="button_archive_inactivate">Archive (Inactivate)</string>
+    <string name="button_delete_permanently">Delete Permanently</string>
+    <string name="timetables_deleted_success">%1$d timetables deleted permanently!</string>
+    <string name="timetable_action_failure">Failed to perform action on timetable: %1$s</string>
+    <string name="timetables_deletion_failure">Failed to delete timetables: %1$s</string>
+
+    <!-- Choose Timetable Source Dialog -->
+    <string name="dialog_choose_timetable_source_title">Choose Timetable Source</string>
+    <string name="button_upload_new_file">Upload New File</string>
+    <string name="button_activate_archived">Activate Archived Timetable</string>
+    <string name="dialog_activate_archived_title">Activate Archived Timetable</string>
+    <string name="no_archived_timetables">No archived timetables available to activate.</string>
+    <string name="no_archived_timetables_to_delete">No archived timetables available to delete.</string>
+    <string name="dialog_delete_archived_title">Delete Archived Timetables</string>
+    <string name="button_delete_selected">Delete Selected</string>
+    <string name="no_timetables_selected_for_deletion">No timetables selected for deletion.</string>
+
+    <!-- Menu Strings -->
+    <string name="menu_see_clashes">See Clashes</string>
+    <string name="menu_see_schedule">See Schedule</string>
+    <string name="menu_delete_archived_timetables">Delete Archived Timetables</string>
+    <string name="menu_my_profile">My Profile</string>
+    <string name="menu_help">Help</string>
+
+    <!-- My Profile Dialog Strings -->
+    <string name="profile_name_label">Your Name:</string>
+    <string name="profile_name_hint">e.g. Illustration of Solution</string>
+    <string name="profile_alias_label">Your Alias (for sharing):</string>
+    <string name="profile_alias_hint">e.g., JDoe</string>
+    <string name="profile_saved_success">Profile settings saved successfully!</string>
+    <string name="profile_notification_settings_label">Notification Settings</string>
+    <string name="class_notif_title">Class Notification Times</string>
+    <string name="assign_notif_title">Assignment/Deliverable/WorkItem Notification Times</string>
+    <string name="exam_notif_title">Exam Notification Times</string>
+
+    <!-- Assignment Notification Checkbox Labels -->
+    <string name="assign_notif_3_days">3 Days Before</string>
+    <string name="assign_notif_2_days">2 Days Before</string>
+    <string name="assign_notif_1_day">1 Day Before</string>
+    <string name="assign_notif_12_hours">12 Hours Before</string>
+    <string name="assign_notif_6_hours">6 Hours Before</string>
+    <string name="assign_notif_3_hours">3 Hours Before</string>
+    <string name="assign_notif_1_hour">1 Hour Before</string>
+
+    <!-- Exam Notification Checkbox Labels -->
+    <string name="exam_notif_5_days">5 Days Before</string>
+    <string name="exam_notif_3_days">3 Days Before</string>
+    <string name="exam_notif_1_day">1 Day Before</string>
+    <string name="exam_notif_12_hours">12 Hours Before</string>
+    <string name="exam_notif_6_hours">6 Hours Before</string>
+    <string name="exam_notif_3_hours">3 Hours Before</string>
+    <string name="exam_notif_1_hour">1 Hour Before</string>
+
+    <!-- Notification Messages (updated to be more generic) -->
+    <string name="notification_title_upcoming_assignment">Upcoming Assignment/Deliverable/WorkItem!</string>
+    <string name="notification_message_upcoming_assignment">Your assignment %1$s for %2$s is due on %3$s at %4$s.</string>
+
+    <string name="notification_title_upcoming_exam">Upcoming Exam!</string>
+    <string name="notification_message_upcoming_exam">Your exam for %1$s is on %2$s at %3$s.</string>
+
+    <string name="notification_title_upcoming_class">Upcoming Class!</string>
+    <string name="notification_message_upcoming_class">Your class for %1$s is at %2$s in %3$s.</string>
+
+    <string name="notification_timetable_archived_title">Timetable Archived</string>
+    <string name="notification_timetable_archived_message">The timetable "%1$s" has been archived\nas its validity period ended.</string>
+
+    <string name="notification_adhoc_engagement_deleted_title">Engagement/Meeting Deleted</string>
+    <string name="notification_adhoc_engagement_deleted_message">The ad-hoc engagement "%1$s" has been automatically\ndeleted as its validity period ended.</string>
+
+    <string name="notification_exam_deleted_title">Exam Deleted</string>
+    <string name="notification_exam_deleted_message">The exam for "%1$s" has been automatically deleted\nas it has passed.</string>
+
+    <!-- Help Dialog Content -->
+    <string name="help_text">
+        Welcome to TimetableApp! This app helps you manage your academic and personal schedules.\n\n
+        <b>Main Screen:</b>\n
+        - <b>Upload Timetable:</b> Import your lecture, lab, or tutorial schedules from a CSV file. The app will prompt you for validity dates and default notification settings.\n
+        - <b>Add Engagement / Meeting:</b> Create one-off or recurring personal engagements (e.g., meetings, appointments) that are not part of a formal timetable.\n
+        - <b>View Assignment/Deliverable/WorkItems:</b> See a list of all your assignments, their due dates, estimated completion time, and current progress. You can add, edit, or delete assignments.\n
+        - <b>View Exams:</b> See a list of all your upcoming exams, their dates, times, and venues. You can add, edit, or delete exams.\n
+        - <b>Timetable Entries:</b> Your active timetables, assignments, and exams will be listed here. Tap on a timetable to see its details (class sessions).\n
+        - <b>Floating Action Button (+):</b> Quickly add a new ad-hoc engagement.\n
+        - <b>3-dot Menu:</b> Access additional options:\n
+            - <b>See Clashes:</b> View potential time conflicts between your scheduled events for a selected day.\n
+            - <b>See Schedule:</b> Get a detailed hourly view of your events for a selected day.\n
+            - <b>Delete Archived Timetables:</b> Permanently delete timetables that have been archived.\n
+            - <b>My Profile:</b> Configure your name, alias, and global notification preferences for different event types.\n
+            - <b>Help:</b> Access this help guide.\n\n
+        <b>Timetable Details:</b>\n
+        - Displays the class sessions for a selected timetable. You can set individual notification offsets or silence notifications for specific sessions.\n
+        - The "Silence All Notifications" checkbox at the top allows you to mute all notifications for that entire timetable.\n\n
+        <b>Notifications:</b>\n
+        - The app schedules notifications to remind you of upcoming classes, engagements, assignments, and exams based on your preferences.\n
+        - Ensure you grant notification permissions when prompted.\n\n
+        <b>Cleanup Worker:</b>\n
+        - The app automatically archives old timetables and deletes expired ad-hoc engagements and exams to keep your data tidy. You will receive notifications about these actions.\n\n
+        For any issues or feedback, please contact support.
+    </string>
+
+    <!-- Clash Detection and Schedule View Format Strings -->
+    <string name="clash_format_type">Type</string>
+    <string name="clash_format_date">Date</string>
+    <string name="clash_format_time">Time</string>
+    <string name="clash_format_location">Location</string>
+    <string name="clash_format_notes">Notes</string>
+    <string name="clash_type_lecture">Lecture</string>
+    <string name="clash_type_personal">Personal</string>
+    <string name="clash_type_exam">Exam</string>
+
+    <string name="schedule_format_type">Type</string>
+    <string name="schedule_format_date">Date</string>
+    <string name="schedule_format_time">Time</string>
+    <string name="schedule_format_location">Location</string>
+    <string name="schedule_format_notes">Notes</string>
+    <string name="schedule_type_lecture">Lecture</string>
+    <string name="schedule_type_personal">Personal</string>
+    <string name="schedule_type_exam">Exam</string>
+
+    <!-- NEW: Strings for Engagement UI from provided XML -->
+    <string name="day_selection_type_label">How often does this engagement/meeting occur?</string>
+    <string name="radio_recur_days">Recur every N days</string>
+    <string name="day_of_week_label">Days of the Week:</string>
+    <string name="start_time_label">Start Time:</string>
+    <string name="start_time_hint">Start Time</string>
+    <string name="duration_label">Duration (minutes):</string>
+    <string name="duration_hint">Duration in Minutes e.g. 30, 45, 60, 90, 720</string>
+    <string name="engagement_start_date_label">Start Date:</string>
+    <string name="engagement_start_date_hint">Start Date</string>
+    <string name="engagement_end_date_label">End Date:</string>
+    <string name="engagement_end_date_hint">End Date</string>
+
+    <!-- ADDED: New string resources for ClassSessionAdapter -->
+    <string name="session_details_format">%1$s: %2$s - %3$s</string>
+    <string name="notification_time_format">%1$s (%2$d min before)</string>
+    <string name="session_notes_format">Notes: %1$s</string>
+    <string name="number_one">1</string>
+    <string name="number_two">2</string>
+    <string name="number_three">3</string>
+    <string name="number_four">4</string>
+    <string name="number_five">5</string>
+    <string name="number_six">6</string>
+    <string name="number_seven">7</string>
+    <string name="hours_text">hours</string>
+    <string name="minutes_text">minutes</string>
+    <string name="dialog_help_title">My Schedules</string>
+    <string name="profile_phone_number_label">Phone Number</string>
+    <string name="profile_phone_number_hint">+91.90000.00001</string>
+    <string name="profile_mail_id_label">eMail id</string>
+    <string name="profile_mail_id_hint">abcd.efgh@gmail.com</string>
+    <string name="delete_item_description">Delete Assignment/Deliverable/WorkItem</string>
+    <string name="edit_item_description">Edit Assignment/Deliverable/WorkItem</string>
+    <string name="assignment_name">Assignment/Deliverable/WorkItem Name</string>
+    <string name="course_name">Course: Course Name</string>
+    <string name="due_date_time">Due: YYYY-MM-DD at HH:MM</string>
+    <string name="progress_percent">Progress: 0% (Est. 0 days)</string>
+    <string name="edit_assignment">Edit Assignment/Deliverable/WorkItem</string>
+    <string name="delete_assignment">Delete Assignment/Deliverable/WorkItem</string>
+    <string name="notification_1_label">Notification 1 : </string>
+    <string name="notification_2_label">Notification 2 : </string>
+    <string name="exam_course_name">Exam Course Name</string>
+    <string name="date_yyyy_mm_dd">Date: YYYY-MM-DD</string>
+    <string name="time_hh_mm_hh_mm">Time: HH:MM - HH:MM</string>
+    <string name="venue_exam_hall">Venue: Exam Hall</string>
+    <string name="edit_exam">Edit Exam</string>
+    <string name="delete_exam">Delete Exam</string>
+    <string name="clash_type_engagement">Engagement</string>
+    <string name="confirm_delete_exam_message">Are you sure you want to delete the exam : %1$s\nscheduled on %2$s?\nThis cannot be undone.</string>
+    <string name="exam_delete_failure">Failed to delete the exam</string>
+    <string name="exam_delete_failure_error">Encountered error while deleting\nthe exam due to %1$s</string>
+    <string name="exam_overdue">Exam Overdue</string>
+    <string name="exam_details_format">Exam Details :\nDate : %1$s\nFrom : %2$s to %3$s \nAt : %4$s</string>
+    <string name="schedule_type_engagement">Engagement</string>
+    <string name="notification_title_upcoming_engagement">Upcoming Engagement/Meeting</string>
+    <string name="notification_message_upcoming_engagement">Your engagement "%1$s" is scheduled for %2$s.</string>
+    <string name="notification_engagement_deleted_title">Engagement/Meeting Deletion</string>
+    <string name="notification_engagement_deleted_message">Your engagement \"%1$s\" is deleted\nbecause it is past its end date.</string>
+    <string name="sixty_minutes">60</string>
+
+    <!-- NEW STRINGS ADDED BELOW -->
+    <string name="engagement_type_label">Engagement</string>
+    <string name="engagement_validity_period_display">Valid: %1$s to %2$s</string>
+    <string name="engagement_recurrence_display">Recurrence: Every %1$d days</string>
+    <string name="engagement_days_display">Days: %1$s</string>
+    <string name="engagement_daily_display">Recurrence: Daily</string>
+    <string name="engagement_time_range_display">Time: %1$s - %2$s</string>
+    <string name="engagement_notes_display">Notes: %1$s</string>
+    <string name="no_active_timetables_found">No active timetables found. Upload or add one!</string>
+    <string name="timetable_activated_success">Timetable "%1$s" activated successfully!</string>
+    <string name="csv_parsed_success">Parsed and saved %1$d class sessions for timetable: %2$s</string>
+    <string name="timetable_archived_success">Timetable "%1$s" archived successfully!</string>
+    <string name="timetable_deleted_success">Timetable "%1$s" deleted permanently!</string>
+    <string name="dialog_archive_delete_message_format">What would you like to do with timetable "%1$s"?</string>
+    <string name="confirm_delete_timetable_message">Are you sure you want to delete timetable "%1$s"?\nAll associated class sessions will also be deleted.\nThis action cannot be undone.</string>
+    <string name="confirm_delete_engagement_message">Are you sure you want to delete the engagement "%1$s"?\nThis action cannot be undone.</string>
+    <string name="selected_delete_archived_success">Selected archived timetables deleted successfully!</string>
+    <string name="selected_delete_archived_failure">Failed to delete selected archived timetables: %1$s</string>
+    <string name="dialog_select_archived_timetable_title">Select Archived Timetable to Activate</string>
+    <string name="confirm_delete_archived_message">Are you sure you want to delete the following archived timetables?\n\n%1$s\n\nThis action cannot be undone.</string>
+    <string name="confirm_delete_archived_title">Confirm Deletion of Archived Timetables</string>
+    <string name="timetable_activate_failure">Failed to activate timetable: %1$s</string>
+    <string name="timetable_archive_failure">Failed to archive timetable: %1$s</string>
+    <string name="timetable_delete_failure">Failed to delete timetable: %1$s</string>
+    <string name="delete_failure">Failed to delete item: %1$s</string>
+    <string name="parsing_csv_message">Parsing CSV file...</string>
+    <string name="csv_parsed_empty">CSV parsed, but no valid class sessions found.</string>
+    <string name="csv_parsing_error">Error parsing CSV: %1$s</string>
+    <string name="dialog_date_order_error">End date cannot be before start date.</string>
+    <string name="no_archived_timetables_found">No archived timetables found.</string>
+    <string name="dialog_profile_title">My Profile</string>
+    <string name="select_archived_timetables_delete">Select Archived Timetables to Delete</string>
+    <string name="thirty_minutes">30</string>
+    <string name="assignment_progress_format">Current Progress : %1$d%%\nEstimated Days : %2$d days</string>
+    <string name="timetable_header_text">LECTURE/LAB/TUTORIAL</string>
+    <string name="personal_timetable_header_text">PERSONAL</string>
+    <string name="no_class_sessions_found">No Class Sessions Found</string>
+    <string name="notifications_silenced_on">"Notifications are silenced for timetable : %1$s"</string>
+    <string name="notifications_unsilenced_on">"Notifications are on (unsilenced) for timetable : %1$s"</string>
+    <string name="time_range_format">From: %1$s To: %2$s</string>
+    <string name="class_session_details_format">Day : %1$s; From %2$s: To : %3$s\nVenue : %4$s</string>
+    <string name="engagement_validity_dates_format">"From : %1$s To : %2$s"</string>
+    <string name="engagement_daily">DAILY</string>
+    <string name="engagement_timeslot_notes_format">From : %1$s To : %2$s\nNotes : %3$s</string>
+    <string name="validity_dates_format">From : %1$s To : %2$s</string>
+    <string name="not_set">Notification is not set</string>
+    <string name="notification_times_format">Notifications : %1$d min / %2$d min</string>
+    <string name="update_timetable">Update Timetable</string>
+
+    <!-- Column Headers in Schedule View -->
+    <string name="schedule_column_lecture">LECTURE / EXAM</string>
+    <string name="schedule_column_personal">PERSONAL</string>
+    <string name="schedule_column_engagement">ENGAGEMENT</string>
+    <string name="schedule_column_action">ACTION</string>
+
+    <string name="schedule_dialog_lecture_title">CLASS SESSION / MEETING</string>
+    <string name="schedule_dialog_personal_title">PERSONAL</string>
+    <string name="schedule_dialog_engagement_title">ENGAGEMENT</string>
+    <string name="schedule_dialog_exam_title">EXAM / CRITICAL MEETING</string>
+    <string name="schedule_dialog_assignment_title">ASSIGNMENT / DELIVERABLE</string>
+    <string name="schedule_dialog_todo_title">TO DO</string>
+    <string name="schedule_dialog_action_title">ACTION</string>
+    <string name="schedule_dialog_calendar_event_title">CALENDAR</string>
+    <string name="schedule_dialog_task_title">TASKS</string>
+
+    <!-- Class Session View in Schedule View -->
+    <string name="dialog_class_session_details_title">Class Session Details</string>
+    <string name="dialog_class_course_name">Course Name:</string>
+    <string name="dialog_class_day_time">Day &amp; Time:</string>
+    <string name="dialog_class_notes">Notes:</string>
+
+    <!-- Engagement View in Schedule View -->
+    <string name="dialog_engagement_details_title">Engagement/Meeting Details</string>
+    <string name="dialog_engagement_name">Engagement/Meeting Name:</string>
+    <string name="dialog_engagement_validity_dates">Validity Dates:</string>
+    <string name="dialog_engagement_day_recurrence">Recurrence:</string>
+    <string name="dialog_engagement_time_notes">Time &amp; Notes:</string>
+
+    <!-- Exam View in Schedule View -->
+    <string name="dialog_exam_details_title">Exam Details</string>
+    <string name="dialog_exam_course_name">Course Name:</string>
+    <string name="dialog_exam_date">Date:</string>
+    <string name="dialog_exam_time">Time:</string>
+    <string name="dialog_exam_venue">Venue:</string>
+    <string name="schedule_format_validity">Validity</string>
+    <string name="schedule_format_recurrence">Days / Recurrence</string>
+    <string name="schedule_format_venue">Venue</string>
+
+    <!-- NEW: Strings for Edit/Delete actions in dialogs -->
+    <string name="edit_item_general_description">Edit this item</string>
+    <string name="delete_item_general_description">Delete this item</string>
+    <string name="dialog_delete_confirmation_title">Confirm Deletion</string>
+    <string name="dialog_delete_confirmation_message">Are you sure you want to delete this "%1$s" ?\nThis action cannot be undone.</string>
+    <string name="delete_success">Event deleted successfully!</string>
+
+    <!-- NEW strings for Schedule View Assignment details -->
+    <string name="schedule_column_assignment">ASSIGNMENT</string>
+    <string name="schedule_format_course_name">Course Name</string>
+    <string name="schedule_format_due_date">Due Date</string>
+    <string name="schedule_format_submission_time">Submission Time</string>
+    <string name="schedule_format_estimated_days">Estimated Days</string>
+    <string name="schedule_format_current_progress">Current Progress</string>
+
+    <!-- NEW: To-Do List Strings -->
+    <string name="add_todo_title">Add New To-Do</string>
+    <string name="todo_title_label">Title:</string>
+    <string name="todo_title_hint">e.g., Buy groceries, Finish report</string>
+    <string name="todo_description_label">Description (Optional):</string>
+    <string name="todo_description_hint">Notes about the To-Do (Helps in search)</string>
+    <string name="todo_due_date_label">Due Date (Optional):</string>
+    <string name="todo_due_date_hint">Due Date</string>
+    <string name="todo_due_time_label">Due Time (Optional):</string>
+    <string name="todo_due_time_hint">Due Time</string>
+    <string name="todo_priority_label">Priority:</string>
+    <string name="todo_is_completed_label">Mark as Completed</string>
+    <string name="save_todo_button_text">Save To-Do</string>
+    <string name="edit_todo_title">Edit To-Do Item</string>
+    <string name="update_todo_button_text">Update To-Do</string>
+    <string name="todo_not_found">"No To-Do's were found "</string>
+    <string name="todo_load_error">Error loading T-Do\'s :\n%1$s</string>
+    <string name="todo_title_required">Please fill all the details.</string>
+    <string name="todo_due_date_past_warning">This To-Do is past the due date.\\nYou can edit and move the due date and time.</string>
+    <string name="todo_save_success">To-Do saved successfully</string>
+    <string name="todo_update_success">To-Do updated successfully</string>
+    <string name="todo_save_failure">To-Do could NOT be saved due to:\n%1$s</string>
+    <string name="todo_update_failure">To-Do could not be updated due to :\n%1$s</string>
+    <string name="confirm_delete_todo_message">Are you sure that you want to delete %1$s ?\n This action cannot be undone.</string>
+    <string name="todo_deleted_success">Successfully deleted To-Do item :\n%1$s</string>
+    <string name="todo_delete_failure_error">Could not delete To-Do item due to :\n%1$s</string>
+    <string name="todo_completed_status">This To-Do item has been completed.\nWELL DONE !</string>
+    <string name="todo_pending_status">This To-Do item is pending.\nDo you want to keep it as-is or update the % completed\\nor delete it ?</string>
+    <string name="add_todo_button_text">Add To-Do</string>
+    <string name="view_todos_button_text">View To-Do\'s</string>
+    <string name="no_todos_found">No To-Do\'s were found</string>
+    <string name="todo_due_format">To-Do item with Due Date %1$s\nand Due Time %2$s</string>
+    <string name="todo_priority_format">To-Do item\'s priority is %1$s</string>
+    <string name="todo_created_format">To-Do item created on %1$s</string>
+
+    <!-- String Array for To-Do Priorities -->
+    <string-array name="todo_priorities">
+        <item>None</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
+    <string name="priority_high">High</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_none">None</string>
+    <string name="exit_without_saving_title">Exit Without Saving ?</string>
+    <string name="exit_without_saving_message">You are exiting before saving. Are you sure you do NOT want to save this ?</string>
+    <string name="exit_without_saving_confirm">Yes, exit without Saving</string>
+    <string name="exit_without_saving_engagement_message">Are you sure you want to exit without saving the Engagement/Meeting ?</string>
+    <string name="exit_without_saving_changes_engagement_message">Are you sure you want to exit without saving the changes in the Engagement/Meeting ?</string>
+    <string name="exit_without_saving_exam_message">Are you sure you want to exit without saving the Exam ?</string>
+    <string name="exit_without_saving_changes_exam_message">Are you sure you want to exit without saving the changes in the Exam ?</string>
+    <string name="exit_without_saving_assignment_message">Are you sure you want to exit without saving the Assignment ?</string>
+    <string name="exit_without_saving_changes_assignment_message">Are you sure you want to exit without saving the changes in the Assignment ?</string>
+    <string name="schedule_column_todo">TODO</string>
+
+    <!-- NEW Profile Page Strings -->
+    <string name="profile_title">My Profile Settings</string>
+    <string name="save_profile_button_text">Save Profile</string>
+    <string name="cancel_profile_button_text">Cancel</string>
+
+    <!-- NEW To-Do Notification Checkbox Labels -->
+    <string name="todo_notif_title">To-Do Notification Times</string>
+    <string name="todo_notif_30_days">30 Days Before</string>
+    <string name="todo_notif_25_days">25 Days Before</string>
+    <string name="todo_notif_20_days">20 Days Before</string>
+    <string name="todo_notif_15_days">15 Days Before</string>
+    <string name="todo_notif_10_days">10 Days Before</string>
+    <string name="todo_notif_7_days">7 Days Before</string>
+    <string name="todo_notif_5_days">5 Days Before</string>
+    <string name="todo_notif_3_days">3 Days Before</string>
+    <string name="todo_notif_1_day">1 Day Before</string>
+
+    <!-- NEW Auto-Deletion Settings Strings -->
+    <string name="auto_delete_assignments_label">Auto-delete Assignment/Deliverable/WorkItems after:</string>
+    <string name="auto_delete_completed_todos_label">Auto-delete COMPLETED To-Do\'s after:</string>
+    <string name="days_unit">days</string>
+    <string name="fifteen_minutes">15</string>
+    <string name="stop_recording_button_text">Stop Recording</string>
+    <string name="recording_audio_title">Recording Audio...</string>
+
+    <!-- New strings for Audio Recording -->
+    <string name="save_audio_note_title">Save Audio Note?</string>
+    <string name="save_audio_note_message">Do you want to save this audio note?</string>
+    <string name="audio_note_discarded">Audio note discarded.</string>
+    <string name="play_audio_note_button_text">Play Audio</string>
+    <string name="stop_playback_button_text">Stop Playback</string>
+    <string name="add_note_title">Add Notes</string>
+    <string name="note_subject_hint">Subject: e.g. Physics, Biology, History</string>
+    <string name="save_note_button_text">Save Note</string>
+    <string name="exit_without_saving_note_message">Are you sure you want to exit this Note without saving ?</string>
+    <string name="exit_without_saving_changes_note_message">Exit without saving changes</string>
+    <string name="edit_note_title">Edit Note</string>
+    <string name="note_save_success">Note saved successfully</string>
+    <string name="note_save_failure">Note could not be saved due to %1$s</string>
+    <string name="note_description_hint">Topic: Electricity, Ketones, World War 1</string>
+    <string name="upload_notes_button_text">Upload Notes</string>
+    <string name="view_notes_button_text">View Notes</string>
+    <string name="confirm_delete_note_message">Are you sure you want to delete %1$s ? This action cannot be undone.</string>
+    <string name="note_deleted_success">Note %1$s deleted successfully</string>
+    <string name="note_delete_failure">Note deletion failed due to %1$s</string>
+    <string name="search_notes_hint">Physics:Lecture:Electricity,Biology Lab Anatomy,History Handout)</string>
+    <string name="note_last_modified_format">The note was last modified on %1$s</string>
+    <string name="no_subject_text">Default Subject</string>
+    <string name="no_notes_found">No notes found</string>
+    <string name="note_type_hint"><![CDATA[Type: Lecture,Lab,Tutorial,Assignment,Handout,Q&A,Quiz,Quiz Solution]]></string>
+    <string name="empty_note_warning">The note is empty.</string>
+    <string name="note_update_success">The note has been updated successfully\n</string>
+    <string name="note_update_failure">Note not updated due to %1$s</string>
+    <string name="note_update_button_text">Update Note</string>
+
+    <string name="search_assignments_hint">Physics Electricity Motors</string>
+    <string name="search_todos_hint">Physics, Biology, History</string>
+    <string name="ready_to_record">Ready to Record</string>
+    <string name="transcription_will_appear_here">Transcription will appear here...</string>
+    <string name="start_recording">Start</string>
+    <string name="pause">Pause</string>
+    <string name="stop_recording">Stop</string>
+    <string name="audio_recording_complete">Audio Recording Complete</string>
+    <string name="transcription_preview">Transcription Preview:</string>
+    <string name="no_transcription_available">No transcription available.</string>
+    <string name="play_audio">Play Audio</string>
+    <string name="stop_playback">Stop Playback</string>
+    <string name="listening_prompt">Listening...</string>
+    <string name="speaking_prompt">Speaking...</string>
+    <string name="recording_prompt">Recording...</string>
+    <string name="processing_prompt">Processing...</string>
+    <string name="error_message_while_recording">Error: %1$s</string>
+    <string name="transcription_partial_result">%1$s</string>
+    <string name="recording_paused">Paused</string>
+    <string name="resume_recording">Resume</string>
+    <string name="recording_now">Recording...</string>
+    <string name="pause_recording">Pause</string>
+    <string name="time_00_00">00:00</string>
+    <string name="cancel">Cancel</string>
+    <string name="attachment_icon_description">Attachments present</string>
+    <string name="todo_due_date_time_format">Due Date : %1$s Due Time : %2$s</string>
+    <string name="todo_due_date_format">Due Date : %1$s</string>
+    <string name="todo_due_date_string">Due Date :</string>
+    <string name="todo_creation_date_format">"Creation Date : %1$s  "</string>
+    <string name="empty_exam_warning">No Exam(s) found</string>
+
+    <!-- Engagement related strings -->
+    <string name="view_engagements_button_text">View Engagement/Meetings</string>
+    <string name="search_engagements_hint">Search Engagement/Meetings</string>
+    <string name="no_engagements_found">No engagements found.</string>
+    <string name="engagement_days_format">Days: %1$s</string>
+    <string name="engagement_daily_recurrence">Recurrence: Daily</string>
+    <string name="engagement_timeslot_format">Timeslot: %1$s - %2$s</string>
+    <string name="engagement_notes_format">Notes: %1$s</string>
+    <string name="error_no_engagement_id">Engagement ID is missing.</string>
+    <string name="engagement_name_empty_warning">Name cannot be empty</string>
+    <string name="engagement_time_date_empty_warning">Date and time cannot empty</string>
+    <string name="engagement_date_order_error">"End date cannot be earlier than start date "</string>
+    <string name="engagement_no_days_selected_warning">No days selected. You must select a day</string>
+    <string name="empty_engagement_warning">The engagement is empty</string>
+    <string name="duration_minutes_format">%1$d</string>
+    <string name="select_duration_title">Duration (minutes)</string>
+    <plurals name="engagement_recurrence_format">
+        <item quantity="one">Recurrence: Every %d day</item>
+        <item quantity="other">Recurrence: Every %d days</item>
+    </plurals>
+
+    <!-- Subtask related strings -->
+    <string name="subtask_empty_input_warning">There are no available subtasks</string>
+    <string name="subtask_error_no_parent_event">The subtask has no parent event</string>
+    <string name="subtask_duplicate_skipped">Duplicate subtask. Skipped %1$s</string>
+    <string name="subtask_added_success">Subtask added successfully %1$s</string>
+    <string name="subtask_no_new_subtasks_added">No new subtasks added</string>
+    <string name="subtask_cannot_move_up">Subtask cannot move up</string>
+    <string name="subtask_already_at_top">Subtask already at top</string>
+    <string name="subtask_cannot_move_down">Subtask cannot move down</string>
+    <string name="subtask_already_at_bottom">Subtask already at the bottom</string>
+    <string name="subtask_delete_confirm_title">Delete subtask</string>
+    <string name="subtask_delete_confirm_message">Are you sure you want to delete the subtask %1$s ?</string>
+    <string name="subtask_delete_confirm_positive">Yes, delete the subtask</string>
+    <string name="subtask_deleted_success">Subtask successfully deleted</string>
+    <string name="subtask_no_other_events_to_copy_from">There are no other events to copy subtasks from</string>
+    <string name="subtask_error_fetching_events">Error fetching events : %1$s</string>
+    <string name="subtask_copy_from_event_title">Copy subtasks from event %1$s</string>
+    <string name="subtask_copied_success">Copied %1$d subtasks</string>
+    <string name="subtask_no_new_subtasks_copied">No new subtasks copied</string>
+    <string name="subtask_error_copying_subtasks">Error copying subtasks : %1$s</string>
+    <string name="subtask_select_event_warning">Did not select a valid event</string>
+    <string name="subtask_copy_from_event_type_title">Copy subtask(s) from Event</string>
+    <string name="subtask_no_events_for_type">No events for event type : %1$s</string>
+    <string name="subtask_select_event_prompt">Select the specific event to copy tasks from</string>
+    <string name="subtask_select_event_button">Select this Event</string>
+    <string name="subtask_move_up_description">Move Up</string>
+    <string name="subtask_move_down_description">Move down</string>
+    <string name="subtask_delete_description">Delete Sub-task</string>
+    <string name="subtasks_label">Sub-Tasks</string>
+    <string name="subtask_input_hint">Short Task Sentences. Separate with full-stops. Or semi-colon.</string>
+    <string name="add_subtask_button_text">Add as Sub-task(s)</string>
+    <string name="copy_subtasks_button_text">Copy Sub-task(s) from...</string>
+    <string name="no_subtasks_found">No Sub-task(s) added yet</string>
+    <string name="subtask_moved_up_success">Task promoted up the order</string>
+    <string name="subtask_moved_down_success">Task moved down the order</string>
+    <string name="select_event_type_prompt">Copy Sub-task(s) from :</string>
+    <string name="select_event_prompt">Choose a specific event to copy from</string>
+    <string name="select_subtasks_prompt">Select Sub-task(s)</string>
+    <string name="copy_selected_subtasks">Copy selected Sub-task(s)</string>
+    <string name="no_events_found">No Event(s) found</string>
+    <string name="subtask_no_subtasks_selected">No Sub-task(s) selected</string>
+    <string name="untitled_note">Found an untitled note</string>
+    <string name="unknown_event">Unknown event</string>
+    <string name="copy_subtasks_dialog_title">Copy Sub-tasks from another Event</string>
+
+    <!-- Your existing strings -->
+    <string name="menu_images_to_pdf">Images 2 PDF</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="image_edit">Edit</string>
+    <string name="image_delete">Delete</string>
+
+    <!-- New strings for ImageToPdfActivity -->
+    <string name="button_add_page">Click photo for New Page</string>
+    <string name="button_save_page">Save Page</string>
+    <string name="button_save_pdf">Save PDF</string>
+    <string name="dialog_save_pdf_title">Save PDF Document</string>
+    <string name="enter_pdf_file_name">Enter PDF file name</string>
+    <string name="pdf_file_name_hint">e.g., Financial Statement, How to proceed ahead…</string>
+    <string name="dialog_save_button">Save</string>
+    <string name="delete_thumbnail_content_description">Delete image thumbnail</string>
+    <string name="ic_image_placeholder_content_description">Image placeholder</string>
+    <string name="dialog_exit_without_saving_button">Exit without Saving</string>
+    <string name="button_processing_saving">Processing and Saving…</string>
+    <string name="page_1">Page 1</string>
+    <string name="page_thumbnails">Page Thumbnails</string>
+    <string name="brightness">Brightness: %1$d</string>
+    <string name="contrast">Contrast: %1$f</string>
+    <string name="contrast_colon">Contrast:</string>
+    <string name="brightness_colon">Brightness:</string>
+    <string name="adjust_quadrilateral_and_image_settings">Adjust Quadrilateral and Image Settings</string>
+    <string name="_zero">0</string>
+    <string name="_one_dot_zero">1.0</string>
+    <string name="ok">OK</string>
+    <string name="apply_document_style_transform">Apply document-style transform</string>
+    <string name="attachment_string_share_with_button_text">Share with...</string>
+    <string name="attachment_string_no_attachments_to_share">No attachments to share</string>
+    <string name="attachment_string_no_sharing_app_found">No sharing app found</string>
+    <string name="attachment_string_share_attachments_chooser_title">Share Attachment</string>
+    <string name="attachment_string_email_body_header">Sharing attachments for actioning them</string>
+    <string name="attachment_string_copy_attachments_button_text">Copy Attachments From...</string>
+    <string name="attachment_string_copy_attachments_dialog_title">Copy Attachments from another Event</string>
+    <string name="attachment_string_select_event_type_prompt">Choose Event Type</string>
+    <string name="attachment_string_select_event_prompt">Choose a specific event to copy from</string>
+    <string name="attachment_string_select_attachments_prompt">Select Attachments</string>
+    <string name="attachment_string_no_attachments_found_for_event">No attachments found for event</string>
+    <string name="attachment_string_copy_selected_attachments">Copy selected Attachments</string>
+    <string name="attachment_string_no_other_events_to_copy_from">No other Events to copy from</string>
+    <string name="attachment_string_no_events_found">No Events found</string>
+    <string name="attachment_string_no_attachments_selected">No Attachments selected</string>
+    <string name="attachment_string_no_new_attachments_copied">No new attachments copied</string>
+    <string name="attachment_string_attachments_copied_success">%1$d attachments copied successfully</string>
+    <string name="action_start_datetime_format">Start Date and Time : %1$s %2$s</string>
+    <string name="action_end_datetime_format">End Date and Time : %1$s %2$s</string>
+    <string name="delete_action_confirm_title">Confirm the Delete</string>
+    <string name="delete_action_confirm_message">Are you sure you want to delete the action %1$s ? This cannot be undone</string>
+    <string name="delete_action_confirm_positive">Yes, Delete the Action</string>
+    <string name="action_deleted_success">Action %1$s deleted successfully</string>
+    <string name="action_deletion_failure">"Delete failed due to %1$s "</string>
+    <string name="edit_action_title">Edit Action</string>
+    <string name="action_name_cannot_be_empty">Name cannot be empty</string>
+    <string name="action_datetime_mandatory">Start date and time is mandatory</string>
+    <string name="action_end_before_start_error">End datetime cannot be before Start datetime</string>
+    <string name="action_save_success">Action successfully saved</string>
+    <string name="action_save_failure">"Failed to save action due to %1$s "</string>
+    <string name="view_actions_button_text">View Actions / Reminders</string>
+    <string name="search_actions_hint">Case Study, Call, Do, To-Do</string>
+    <string name="no_actions_found">No Actions / Reminders found</string>
+    <string name="add_action_fab_description">Add Action/Reminder</string>
+    <string name="add_action_title">Add Action / Reminder</string>
+    <string name="action_name_hint">Read Case Study, Call cab, Do To-Do ABC</string>
+    <string name="action_description_hint">Give some details about the Action (Optional)</string>
+    <string name="action_start_date_hint">Start Date</string>
+    <string name="action_start_time_hint">Start Time</string>
+    <string name="action_end_date_hint">End Date</string>
+    <string name="action_end_time_hint">End Time</string>
+    <string name="action_silence_notifications">Silence Notifications for this Action/Reminder</string>
+    <string name="save_action_button_text">Save Action / Reminder</string>
+    <string name="action_notification1_hint">Notification 1</string>
+    <string name="action_notification2_hint">Notification 2</string>
+    <string name="action_description_display_format">Description : %1$s</string>
+    <string name="no_description_provided" />
+    <string name="action_start_end_datetime_display_format">Start : %1$s - %2$s</string>
+    <string name="action_notifications_display_format">Notifications : %1$s | %2$s</string>
+    <string name="not_set_short">0</string>
+    <string name="notification_title_upcoming_action">Notification Time</string>
+    <string name="notification_message_upcoming_action">"Upcoming Action : %1$s\\n\nDescription : %2$s,\nStart : %3$s - %4$s "</string>
+    <string name="add_action_button_text">Add Action / Reminder</string>
+    <string name="label_description_bold">Description :</string>
+    <string name="label_duration_bold">Duration :</string>
+    <string name="label_notification_bold">Notifications :</string>
+    <string name="assignment_topic_hint">Topic/Stream:Electricity,Mauryas,UI Development</string>
+    <string name="assignment_estimated_hours_format">Estimated Hours :</string>
+    <string name="schedule_format_assignment_name">Name</string>
+    <string name="schedule_format_estimated_hours">Estimated Hours</string>
+    <string name="add_assignment_fab_description">Add Assignment/Deliverable/WorkItem</string>
+    <string name="assignments_title">My Assignments/Deliverables/WorkItems</string>
+    <string name="percent_sign">%</string>
+    <string name="silence_assignment_notifications_checkbox_text">Silence Notifications</string>
+    <string name="notifications_silenced">Off</string>
+    <string name="notifications_on">On</string>
+    <string name="assignment_notifications_status_format">Notifications :</string>
+    <string name="assignment_due_string">Due :</string>
+    <string name="assignment_displayed_till_format">Card visible till %1$s</string>
+    <string name="action_start_date_past_error">Start Date cannot be in the past</string>
+    <string name="action_start_time_past_error">Start time cannot be in the past</string>
+    <string name="assignment_due_date_past_error">Due Date cannot be in the past</string>
+    <string name="assignment_submission_time_past_error">Submission Time cannot be in the past</string>
+    <string name="assignment_due_date_time_past_error">Due Date and Time cannot be in the past</string>
+    <string name="search_exams_hint">Search Exam Venue eg Physics Hall1</string>
+    <string name="add_exam_fab_description">Add Exam</string>
+    <string name="exam_start_date_past_error">Start Date cannot be in the past</string>
+    <string name="exam_start_time_past_error">Start Time cannot be in the past</string>
+    <string name="exam_start_date_time_past_error">Exam Start Date and Time cannot be in the past</string>
+    <string name="exam_details_hint">Syllabus, Exam Structure</string>
+    <string name="exam_details_label">Exam Details</string>
+    <string name="exam_date_time_venue_format"><![CDATA[<b>Date :</b> %1$s <b>From :</b> %2$s <b>To</b> %3$s (%4$s)<br><b>At :</b> %5$s<br><small>%6$s</small>]]></string>
+    <string name="location_name_hint">Jack\'s Home, Tennis Court, Gym</string>
+    <string name="map_icon_description">Open Maps</string>
+    <string name="selected_location_placeholder">Selected Location</string>
+    <string name="save_location_button_text">Save Location</string>
+    <string name="get_directions_button_text">Get Directions</string>
+    <string name="fetching_address">Fetching address...</string>
+    <string name="no_address_found">No Address Found</string>
+    <string name="geocoder_error">Error while fetching geocoder</string>
+    <string name="invalid_coordinates_error">LatLong coordinates are invalid</string>
+    <string name="select_location_first">Please select a location on the map first</string>
+    <string name="no_location_for_directions">No location selected for directions</string>
+    <string name="google_maps_not_installed">Google Maps is not installed</string>
+    <string name="map_picker_result_error">Problem in picking location</string>
+    <string name="exam_course_name_required">Course Name is mandatory</string>
+    <string name="exam_date_required">Exam Date cannot be in the past</string>
+    <string name="exam_start_time_required">Start time cannot be in the past</string>
+    <string name="exam_end_time_required">End Time cannot be in the past</string>
+    <string name="exam_location_required">Exam Location is mandatory (Put TBD if not sure)</string>
+    <string name="exam_location_name_required">Location name is mandatory</string>
+    <string name="assignment_course_name_required">Subject is mandatory</string>
+    <string name="assignment_topic_required">Topic is mandatory</string>
+    <string name="assignment_name_required">Assignment/Deliverable/WorkItem Name is mandatory</string>
+    <string name="assignment_due_date_required">Date Time cannot be in the past</string>
+    <string name="assignment_submission_time_required">Date time cannot be in the past</string>
+    <string name="todo_due_date_past_error">Due Datetime cannot be in the past</string>
+    <string name="todo_due_time_past_error">Due Datetime cannot be in the past</string>
+    <string name="todo_due_date_required">Due Datetime cannot be in the past</string>
+    <string name="todo_due_time_required">Due Datetime cannot be in the past</string>
+    <string name="todo_due_date_time_past_error">Due Datetime cannot be in the past</string>
+    <string name="action_end_date_before_start_error">End Date cannot be before Start Date</string>
+    <string name="action_end_time_before_start_error">End time cannot be before Start Time</string>
+    <string name="action_start_date_time_past_error">Start Datetime cannot be in the past</string>
+    <string name="note_subject_required">Subject cannot be empty</string>
+    <string name="note_type_required">Type(s) of note cannot be empty</string>
+    <string name="note_description_required">Topic of note cannot be empty</string>
+    <string name="archive_note_checkbox_text">Archive these Notes</string>
+    <string name="note_keywords_hint">Search keywords</string>
+
+    <!-- Strings for errors while adding engagements -->
+    <string name="engagement_name_mandatory_error">Engagement name is required.</string>
+    <string name="engagement_start_time_past_error">Start time cannot be in the past.</string>
+    <string name="engagement_end_time_before_start_time_error">Engagement end time cannot be before start time.</string>
+    <string name="engagement_start_date_past_error">Start date cannot be in the past.</string>
+    <string name="engagement_end_date_before_start_date_error">End date cannot be before start date.</string>
+    <string name="engagement_no_days_selected_error">Please select at least one day for specific days of week.</string>
+    <string name="engagement_ends_in_past_error">Engagement cannot end in the past.</string>
+    <string name="engagement_start_time_mandatory_error">Start Time cannot be in the past</string>
+    <string name="engagement_start_date_mandatory_error">Start Date is mandatory</string>
+    <string name="engagement_end_date_mandatory_error">End Date is mandatory</string>
+    <string name="engagement_location_name_required">Location name is required.</string>
+    <string name="silence_notifications_checkbox_exam">Silence Notifications for this Exam (Careful. Use with Caution)</string>
+    <string name="notifications_are_silenced">Off</string>
+    <string name="notifications_are_on">On</string>
+    <string name="silence_notifications_checkbox_todo">Silence notifications for this ToDo</string>
+    <string name="notification_title_upcoming_todo">Upcoming ToDo</string>
+    <string name="notification_message_upcoming_todo">You have a ToDo item:\\n\n%1$s : %2$s\\n\nDue on : %3$s at %4$s</string>
+    <string name="no_description_provided_short">No description available</string>
+    <string name="todo_priority_string">Priority :</string>
+    <string name="exam_ongoing">Exam Ongoing</string>
+    <string name="exam_over">Exam Finished</string>
+    <string name="notification1_hint">Notification 1</string>
+    <string name="notification2_hint">Notification 2</string>
+    <string name="notification3_hint">Notification 3</string>
+    <string name="select_notification_time_title">Select Notification Time (minutes before)</string>
+    <string name="engagement_duration_zero_error">Duration must be greater than 0 minutes.</string>
+    <string name="engagement_notification_time_invalid_error">Notification time must be 0 or greater.</string>
+    <string name="action_notification3_hint">Notification 3</string>
+    <string name="action_location_name_required">Location is required</string>
+    <string name="label_venue_bold">Venue :</string>
+    <string name="action_done">Action Done</string>
+    <string name="action_default_location">Setting Location to NA</string>
+    <string name="default_location">NA</string>
+    <string name="update_action_button_text">Update Action / Reminder</string>
+    <string name="timezone_label">Change Timezone to match the time-table timings</string>
+    <string name="original_timezone_display_format"> %1$s in original timezone : %2$s</string>
+    <string name="current_timezone_display_format"> %1$s in current timezone : %2$s</string>
+    <string name="timezone_display_format"> %1$s in current timezone : %2$s</string>
+    <string name="todo_current_timezone_format">" %1$s on %2$s in original timezone : %3$s"</string>
+    <string name="todo_original_timezone_format">" %1$s on %2$s in current timezone : %3$s"</string>
+    <string name="todo_current_timezone_html_format">"<b>Due on:</b> %1$s <b>at</b> %2$s (%3$s)"</string>
+    <string name="todo_original_timezone_html_format">"<b>Due on:</b> %1$s <b>at</b> %2$s (%3$s)"</string>
+    <string name="timezone_format">(%1$S)</string>
+    <string name="todo_due_date_html_format"><![CDATA[<b>Due on:</b> %1$s <b>at</b> %2$s]]></string>
+    <string name="action_duration_format">From : %1$s %2$s To : %3$s %4$s (%5$s)</string>
+    <string name="todo_mark_as_completed">Mark as Completed</string>
+    <string name="assignment_done_and_submitted">Done and Submitted/Delivered</string>
+    <string name="card_visible_till">(Card visible till %1$s)</string>
+    <string name="active_timetables_title">Active Timetables</string>
+    <string name="academic_timetable_button_text">Academic Timetable</string>
+    <string name="personal_timetable_button_text">Personal Timetable</string>
+    <string name="no_active_timetables_text">Currently, there are no active timetables.</string>
+    <string name="cancel_session_instance">Cancel Class / Session</string>
+    <string name="edit_session_instance">Edit / Reschedule Class / Session</string>
+    <string name="reschedule_date_hint">Rescheduled Date</string>
+    <string name="reschedule_time_hint">Start Time</string>
+    <string name="reschedule_notes_hint">Notes</string>
+    <string name="reschedule_end_time_hint">End Time</string>
+    <string name="label_notes_bold">Notes :</string>
+    <string name="delete_engagement_confirm_title">Delete Engagement</string>
+    <string name="delete_engagement_confirm_message">Are you sure you want to delete the Engagement %1$s ? This action cannot be undone.</string>
+    <string name="view_engagements_title">View Engagements / Meetings</string>
+    <string name="reschedule_instance">Reschedule this instance</string>
+    <string name="date">Rescheduled Date</string>
+    <string name="end_time_hint">End Time</string>
+    <string name="reschedule_instance_title">Reschedule this instance</string>
+    <string name="reschedule">Reschedule</string>
+    <string name="cancel_instance_title">Cancel this Engagement instance</string>
+    <string name="cancel_instance_confirm_message">Cancel Instance of %1$s</string>
+    <string name="attachment_string_share_subject">Subject : %1$s</string>
+    <string name="attachment_string_shared_hyperlinks_header">Hyperlink(s) :</string>
+    <string name="attachment_string_error_creating_hyperlink_file">Error creating file for other attachments</string>
+    <string name="example_hyperlink">https://www.youtube.com/shorts/XQ-6wPwg8oI</string>
+    <string name="click_picture_text">Click Picture</string>
+    <string name="profile_timetable">Timetable</string>
+    <string name="profile_timetable_notification_1_mins_before">Notification 1 (mins before)</string>
+    <string name="profile_timetable_notification_2_mins_before">Notification 2 (mins before)</string>
+    <string name="profile_engagement">Engagement</string>
+    <string name="notification_1_mins_before">Notification 1 (mins before)</string>
+    <string name="notification_2_mins_before">Notification 2 (mins before)</string>
+    <string name="notification_3_mins_before">Notification 3 (mins before)</string>
+    <string name="profile_action">Action</string>
+    <string name="profile_assignment">Assignment</string>
+    <string name="_3_days_before">3 Days Before</string>
+    <string name="_2_days_before">2 Days Before</string>
+    <string name="_1_day_before">1 Day Before</string>
+    <string name="_12_hours_before">12 Hours Before</string>
+    <string name="_6_hours_before">6 Hours Before</string>
+    <string name="_3_hours_before">3 Hours Before</string>
+    <string name="_1_hour_before">1 Hour Before</string>
+    <string name="profile_exam">Exam</string>
+    <string name="_5_days_before">5 Days Before</string>
+    <string name="profile_to_do">To-Do</string>
+    <string name="_30_days_before">30 Days Before</string>
+    <string name="_25_days_before">25 Days Before</string>
+    <string name="_20_days_before">20 Days Before</string>
+    <string name="_15_days_before">15 Days Before</string>
+    <string name="_10_days_before">10 Days Before</string>
+    <string name="_7_days_before">7 Days Before</string>
+    <string name="auto_deletion_defaults">Auto-Deletion Defaults</string>
+    <string name="completed_items_days_after_completion">Completed Items (days after completion)</string>
+    <string name="profile_notes">Notes</string>
+    <string name="save_preferences">Save Preferences</string>
+    <string name="archive_automatically_after_end_validity_date">Archive automatically after end validity date</string>
+    <string name="silence_notifications_class_session">Silence notifications for this class session</string>
+    <string name="delete_archived_timetables">Choose timetable to delete</string>
+    <string name="silence_notifications_timetable">Silence notifications for this Timetable</string>
+    <string name="app_preferences">App Preferences</string>
+    <string name="notification_defaults">Notification Defaults</string>
+    <string name="component_audio_transcription_not_supported_notice">"Audio Transcription is not supported on this Android version "</string>
+    <string name="button_process_chosen_area">Process chosen area</string>
+    <string name="text_mark_picture_area">Choose Picture Corners</string>
+    <string name="picture_preview_text">Preview of added Page</string>
+    <string name="engagement_time_format_with_timezone">From : %1$s To: %2$s (%3$s)</string>
+    <string name="session_details_format_with_timezone">Session: %1$s, %2$s to %3$s (%4$s)</string>
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="search_a_place">"Search for "</string>
+    <string name="map_marker_description">Location marked</string>
+    <string name="paste_location_hint">Paste Location</string>
+    <string name="find_button_text">Go To Location</string>
+    <string name="help_button_description">Help</string>
+    <string name="attachment_string_error_general_viewing">Error viewing attachment : %1$s</string>
+    <string name="attachment_string_view_with">View with :</string>
+    <string name="drag_to_reorder_subtask">Drag To Reorder</string>
+    <string name="resolving_url">Resolving...</string>
+    <string name="view_calendar_event_title">Calendar Event</string>
+    <string name="description_label">Event Description</string>
+    <string name="date_time_label">Date and Time</string>
+    <string name="location_label">Location</string>
+    <string name="event_title_label">Event</string>
+    <string name="calendar_event_time_format">From %1$s To %2$s (%3$s)</string>
+    <string name="no_location_specified">No Location specified</string>
+    <string name="no_description">No description</string>
+    <string name="label_location_bold">"Location : "</string>
+    <string name="sign_in_with_google_to_sync">Sign in with Google to Sync</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="view_google_task_title">Task</string>
+    <string name="task_title_label">To Do</string>
+    <string name="notes_label">Notes</string>
+    <string name="due_date_time_label">Due Date and Time</string>
+    <string name="no_due_date">No Due date</string>
+    <string name="google_task_due_time_format">Due on : %1$s (%2$s)</string>
+    <string name="add_page">Add Page</string>
+    <string name="save_documents">Save Documents</string>
+
+</resources>

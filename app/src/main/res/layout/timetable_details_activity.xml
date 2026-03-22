@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".timetable.TimetableDetailsActivity"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/timetableNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/rounded_dark_green_background"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fall 2025 Semester Timetable"/>
+
+    <!-- NEW: TextView to display the timetable type (e.g., Lecture, Personal) -->
+    <TextView
+        android:id="@+id/timetableTypeHeaderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:alpha="0.7"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timetableNameTextView"
+        tools:text="Lecture Timetable"
+        android:background="@drawable/rounded_corners_no_boundary"/>
+
+
+    <TextView
+        android:id="@+id/timetableValidityTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:alpha="0.8"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/rounded_corners_no_boundary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timetableTypeHeaderTextView"
+        tools:text="Valid: 2025-09-01 to 2025-12-15" />
+
+    <!-- Master silence checkbox for the entire timetable -->
+    <CheckBox
+        android:id="@+id/masterSilenceCheckbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/silence_all_notifications_for_timetable"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timetableValidityTextView" />
+
+    <TextView
+        android:id="@+id/sessionsHeaderTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/class_sessions_header"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/rounded_dark_blue_background"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masterSilenceCheckbox" />
+
+    <!-- Horizontal ScrollView for the entire timetable grid -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sessionsHeaderTextView">
+
+        <!-- Vertical ScrollView for the content inside HorizontalScrollView -->
+        <ScrollView
+            android:id="@+id/verticalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <!-- TableLayout to build the timetable grid dynamically -->
+            <TableLayout
+                android:id="@+id/timetableTableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*" />
+
+        </ScrollView>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".note.AddNoteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/addNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_note_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_dark_green_background"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/noteSubjectAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:hint="@string/note_subject_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/editTextNoteDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:hint="@string/note_description_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/editTextNoteType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:hint="@string/note_type_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="4dp"
+            app:startIconDrawable="@drawable/ic_notes"
+            app:startIconTint="@null">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNoteKeywords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords"
+                android:minLines="2"
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:hint="@string/note_keywords_hint"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:autofillHints="name"
+                android:completionThreshold="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/checkBoxArchivedNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/archive_note_checkbox_text"
+            android:textSize="11sp"
+            android:layout_marginBottom="2dp"/>
+
+        <include layout="@layout/attachment_layout"
+            android:id="@+id/attachmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"  />
+
+        <include layout="@layout/subtasks_layout"
+            android:id="@+id/subtasksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/saveNoteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_note_button_text" />
+
+    </LinearLayout>
+</ScrollView>

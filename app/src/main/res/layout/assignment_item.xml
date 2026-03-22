@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/assignmentCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- Course Name -->
+        <LinearLayout
+            android:id="@+id/assignmentCourseNameAndTopicAndName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/assignmentCourseNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Physics I" />
+
+            <!-- Assignment Topic and Name -->
+            <TextView
+                android:id="@+id/assignmentTopicAndNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="12sp"
+                android:alpha="0.8"
+                android:layout_marginTop="0dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/deleteAssignmentButton"
+                tools:text="Optics - Homework 3" />
+        </LinearLayout>
+
+        <!-- Due Date and Submission Time -->
+        <TextView
+            android:id="@+id/assignmentDueDateTimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteAssignmentButton"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentCourseNameAndTopicAndName"
+            tools:text="Due: 2025-10-26 at 23:59" />
+
+        <!-- Estimated Time and Current Progress on the same line -->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/estimatedTimeAndProgressLayout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/deleteAssignmentButton"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/assignmentDueDateTimeTextView">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/assignmentEstimatedTimeTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="12sp"-->
+<!--                tools:text="Estimated: 2.50 hours" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/assignmentCurrentProgressTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                tools:text="Progress: 50%" />-->
+<!--        </LinearLayout>-->
+
+        <!-- NEW: Done and Submitted Checkbox -->
+        <CheckBox
+            android:id="@+id/checkboxDoneAndSubmittedCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/assignment_done_and_submitted"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:textSize="11sp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentDueDateTimeTextView"
+            android:minHeight="0dp"/>
+
+        <!-- Hours Left and Notifications Status on the same line -->
+        <LinearLayout
+            android:id="@+id/hoursLeftAndNotificationsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteAssignmentButton"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxDoneAndSubmittedCard">
+
+            <TextView
+                android:id="@+id/assignmentHoursLeftTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                tools:text="120.50 hours left" />
+
+            <TextView
+                android:id="@+id/assignmentNotificationsStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="11sp"
+                android:layout_marginStart="16dp"
+                tools:text="Notifications: On" />
+        </LinearLayout>
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteAssignmentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_item_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editAssignmentButton"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/editAssignmentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_item_description"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deleteAssignmentButton"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

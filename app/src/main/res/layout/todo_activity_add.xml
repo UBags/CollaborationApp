@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".todo.AddTodoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/add_todo_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_todo_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_dark_green_background"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/editTextTodoName"
+                android:hint="@string/todo_title_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp"
+            app:startIconDrawable="@drawable/ic_notes"
+            app:startIconTint="@null">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTodoDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textMultiLine"
+                android:minLines="3"
+                android:gravity="top"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:hint="@string/todo_description_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="0dp"
+                android:minHeight="0dp"
+                android:hint="@string/todo_due_date_hint"
+                app:startIconDrawable="@drawable/ic_calendar"
+                app:startIconTint="@null">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTodoDueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:textSize="11sp"
+                    android:minHeight="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="0dp"
+                android:minHeight="0dp"
+                android:hint="@string/todo_due_time_hint"
+                app:startIconDrawable="@drawable/ic_time"
+                app:startIconTint="@null">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTodoDueTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:textSize="11sp"
+                    android:minHeight="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+        <!-- Timezone Display Layout -->
+        <LinearLayout
+            android:id="@+id/timezoneInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textViewCurrentTimezoneInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textSize="11sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                tools:text="Time: 08:00 (07-Aug-2025) in current timezone: America/New_York"
+                tools:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/textViewOriginalTimezoneInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                tools:text="Time: 17:30 (07-Aug-2025) in original timezone: Asia/Kolkata"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todo_priority_label"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/radioGroupPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/radioMedium"
+            android:layout_marginBottom="4dp">
+            <RadioButton
+                android:id="@+id/radioHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="@string/priority_high"/>
+            <RadioButton
+                android:id="@+id/radioMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="@string/priority_medium"/>
+            <RadioButton
+                android:id="@+id/radioLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="@string/priority_low"/>
+            <RadioButton
+                android:id="@+id/radioNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="@string/priority_none"/>
+        </RadioGroup>
+
+        <!-- NEW: Mark as Completed Checkbox -->
+        <CheckBox
+            android:id="@+id/checkboxIsCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todo_mark_as_completed"
+            android:textSize="11sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <CheckBox
+            android:id="@+id/checkboxSilenceNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/silence_notifications_checkbox_todo"
+            android:textSize="11sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <include layout="@layout/attachment_layout"
+            android:id="@+id/attachmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/subtasks_layout"
+            android:id="@+id/subtasksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/buttonSaveTodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_todo_button_text"/>
+
+    </LinearLayout>
+</ScrollView>

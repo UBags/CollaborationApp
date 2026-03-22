@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".test.TestMapPickerActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Location Picker Component"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Standalone Button to launch MapPickerActivity -->
+    <Button
+        android:id="@+id/launchMapPickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch Map Picker (Direct)"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextViewDirect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direct Result: No location selected."
+        android:layout_marginBottom="24dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- LocationPickerView component -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Using LocationPickerView Component"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <com.costheta.cortexa.util.location.LocationPickerView
+        android:id="@+id/testLocationPickerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextViewComponent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Component Result: No location selected."/>
+
+</LinearLayout>

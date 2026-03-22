@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/classSessionCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- NEW: Edit instance icon -->
+        <ImageButton
+            android:id="@+id/editInstanceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_reschedule"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_session_instance"
+            app:layout_constraintEnd_toStartOf="@+id/cancelInstanceButton"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="20dp"/>
+
+        <!-- NEW: Cancel instance icon -->
+        <ImageButton
+            android:id="@+id/cancelInstanceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cancel_session_instance"
+            android:visibility="gone"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"/>
+
+        <!-- Course Name -->
+        <TextView
+            android:id="@+id/courseNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/editInstanceButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Physics I" />
+
+        <!-- Day and Time -->
+        <TextView
+            android:id="@+id/dayTimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseNameTextView"
+            tools:text="Monday, 09:00 - 10:00" />
+
+        <!-- Notification 1 -->
+        <TextView
+            android:id="@+id/notification1Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_1_label"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dayTimeTextView" />
+
+        <TextView
+            android:id="@+id/notification1TimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            app:layout_constraintStart_toEndOf="@+id/notification1Label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/notification1Label"
+            app:layout_constraintBottom_toBottomOf="@+id/notification1Label"
+            tools:text="08:30 (30 min before)" />
+
+        <!-- Notification 2 -->
+        <TextView
+            android:id="@+id/notification2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_2_label"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notification1TimeTextView" />
+
+        <TextView
+            android:id="@+id/notification2TimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp"
+            app:layout_constraintStart_toEndOf="@+id/notification2Label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/notification2Label"
+            app:layout_constraintBottom_toBottomOf="@+id/notification2Label"
+            tools:text="08:45 (15 min before)" />
+
+        <!-- Silence Notifications Checkbox for individual session -->
+        <CheckBox
+            android:id="@+id/silenceNotificationsCheckbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/silence_notifications_class_session"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notification2TimeTextView" />
+
+        <!-- Notes (if any) -->
+        <TextView
+            android:id="@+id/notesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/silenceNotificationsCheckbox"
+            tools:text="Notes: Lab session in Room 301" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

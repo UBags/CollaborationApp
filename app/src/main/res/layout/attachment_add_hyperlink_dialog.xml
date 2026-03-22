@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/rounded_dark_blue_background"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="4dp"
+        android:text="@string/attachment_string_enter_hyperlink_hint"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+        android:layout_marginBottom="4dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextHyperlinkUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/example_hyperlink"
+            android:autofillHints="name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attachment_string_attachment_title_hint"
+        android:textStyle="italic"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+        android:layout_marginBottom="4dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDisplayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/profile_name_hint"
+            android:autofillHints="name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

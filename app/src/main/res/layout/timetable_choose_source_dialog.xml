@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:background="@drawable/rounded_corners">
+
+    <TextView
+        android:id="@+id/dialogTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_choose_timetable_source_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/rounded_dark_blue_background"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="6dp"/>
+
+    <Button
+        android:id="@+id/uploadNewFileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_upload_new_file"
+        android:layout_marginBottom="4dp" />
+
+    <Button
+        android:id="@+id/activateArchivedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_activate_archived" />
+
+</LinearLayout>

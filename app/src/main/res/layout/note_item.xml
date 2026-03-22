@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noteCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- Note Subject -->
+        <TextView
+            android:id="@+id/noteSubjectTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/attachmentIconImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Meeting Notes" />
+
+        <!-- Attachment Icon -->
+        <ImageView
+            android:id="@+id/attachmentIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_attach_file"
+            android:contentDescription="@string/attachment_icon_description"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/noteSubjectTextView"
+            app:layout_constraintEnd_toStartOf="@+id/deleteNoteButton"
+            app:layout_constraintTop_toTopOf="@+id/noteSubjectTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/noteSubjectTextView"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <!-- Note Type -->
+        <TextView
+            android:id="@+id/noteTypeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteNoteButton"
+            app:layout_constraintTop_toBottomOf="@+id/noteSubjectTextView"
+            tools:text="Type: General" />
+
+        <!-- Note Description -->
+        <TextView
+            android:id="@+id/noteDescriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="11sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteNoteButton"
+            app:layout_constraintTop_toBottomOf="@+id/noteTypeTextView"
+            tools:text="Description: Discussed project progress and next steps." />
+
+        <!-- Note Keywords -->
+        <TextView
+            android:id="@+id/noteKeywordsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="11sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteNoteButton"
+            app:layout_constraintTop_toBottomOf="@+id/noteDescriptionTextView"
+            tools:text="Keywords: project, status, update" />
+
+        <!-- Note Card Visible Message -->
+        <TextView
+            android:id="@+id/noteCardVisibleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteNoteButton"
+            app:layout_constraintTop_toBottomOf="@+id/noteKeywordsTextView"
+            tools:text="(Card visible till)" />
+
+        <!-- NEW: Archive Note Checkbox -->
+        <CheckBox
+            android:id="@+id/archiveNoteCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/archive_note_checkbox_text"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:minHeight="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteCardVisibleView" />
+
+        <!-- TIMEZONE CHANGE: LinearLayout for Last Modified and Timezone -->
+        <LinearLayout
+            android:id="@+id/lastModifiedLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/editNoteButton"
+            app:layout_constraintTop_toBottomOf="@+id/archiveNoteCheckBox">
+
+            <TextView
+                android:id="@+id/noteLastModifiedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="?android:attr/textColorSecondary"
+                tools:text="Last modified on: 2025-07-22 10:30" />
+
+            <TextView
+                android:id="@+id/noteTimezoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginStart="4dp"
+                tools:text="(Asia/Kolkata)" />
+        </LinearLayout>
+
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_item_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editNoteButton"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/editNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_item_description"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deleteNoteButton"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

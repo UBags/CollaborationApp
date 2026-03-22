@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".assignment.AddAssignmentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/addAssignmentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_assignment_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_dark_green_background"/>
+
+        <!-- Course Name (AutoCompleteTextView) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/assignmentCourseNameAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:hint="@string/assignment_course_name_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Assignment Topic (AutoCompleteTextView) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/assignmentTopicAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:hint="@string/assignment_topic_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Assignment Name (AutoCompleteTextView) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/assignmentNameAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/assignment_name_hint"
+                android:inputType="textCapWords"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:autofillHints="name"
+                android:completionThreshold="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <!-- Due Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="0dp"
+                android:minHeight="0dp"
+                android:hint="@string/assignment_due_date_hint"
+                app:startIconDrawable="@drawable/ic_calendar"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/assignmentDueDateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="date"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textSize="11sp"
+                    android:minHeight="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Submission Time -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="0dp"
+                android:minHeight="0dp"
+                app:startIconDrawable="@drawable/ic_time"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/assignmentSubmissionTimeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:autofillHints="time"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="@string/assignment_submission_time_hint"
+                    android:inputType="none"
+                    android:textSize="11sp"
+                    android:minHeight="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- NEW: Timezone Display Layout -->
+        <LinearLayout
+            android:id="@+id/timezoneInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/currentTimezoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textSize="11sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                tools:text="Time: 08:00 in current timezone: America/New_York"
+                tools:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/originalTimezoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                tools:text="Time: 17:30 in original timezone: Asia/Kolkata"
+                tools:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- NEW: Done and Submitted Checkbox -->
+        <CheckBox
+            android:id="@+id/checkboxDoneAndSubmitted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/assignment_done_and_submitted"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:textSize="11sp"
+            android:minHeight="0dp"/>
+
+        <!-- Silence Notifications CheckBox -->
+        <CheckBox
+            android:id="@+id/silenceAssignmentNotificationsCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/silence_assignment_notifications_checkbox_text"
+            android:layout_marginBottom="0dp"
+            android:textSize="11sp"
+            android:minHeight="0dp"/>
+
+        <LinearLayout
+            android:id="@+id/estimatedTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="2dp">
+            <!-- Estimated Time to Do Assignment - Hours -->
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:minHeight="0dp"/>
+
+            <TextView
+                android:id="@+id/assignmentEstimatedTimeLabel"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/assignment_estimated_time_label"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_weight="75"
+                android:minHeight="0dp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:minHeight="0dp"/>
+
+            <NumberPicker
+                android:id="@+id/estimatedHoursPicker"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="45"
+                android:textSize="11sp"
+                android:minHeight="0dp"
+                android:scaleX="1.25"
+                android:scaleY="1.25"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/assignment_estimated_hours_label"
+                android:textSize="11sp"
+                android:layout_weight="45"
+                android:minHeight="0dp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:minHeight="0dp"/>
+
+            <TextView
+                android:id="@+id/assignmentCurrentProgressLabel"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/assignment_current_progress_label"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_weight="75"
+                android:minHeight="0dp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:minHeight="0dp"/>
+
+            <NumberPicker
+                android:id="@+id/currentProgressPicker"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="11sp"
+                android:layout_weight="45"
+                android:minHeight="0dp"
+                android:scaleX="1.25"
+                android:scaleY="1.25"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/percent_sign"
+                android:textSize="11sp"
+                android:layout_weight="20"
+                android:minHeight="0dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currentProgressRowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <!-- Current Progress -->
+
+        </LinearLayout>
+
+        <!-- Include the new attachment layout here -->
+        <include layout="@layout/attachment_layout"
+            android:id="@+id/attachmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- NEW: Include the subtasks layout here -->
+        <include layout="@layout/subtasks_layout"
+            android:id="@+id/subtasksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Save Assignment Button -->
+        <Button
+            android:id="@+id/saveAssignmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/assignment_save_button_text" />
+
+    </LinearLayout>
+</ScrollView>

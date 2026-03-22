@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/examCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- Course Name -->
+        <TextView
+            android:id="@+id/examCourseNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/attachmentIconImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Physics I" />
+
+        <!-- Attachment Icon -->
+        <ImageView
+            android:id="@+id/attachmentIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_attach_file"
+            android:contentDescription="@string/attachment_icon_description"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/examCourseNameTextView"
+            app:layout_constraintEnd_toStartOf="@+id/deleteExamButton"
+            app:layout_constraintTop_toTopOf="@+id/examCourseNameTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/examCourseNameTextView"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <!-- Exam Details -->
+        <TextView
+            android:id="@+id/examDetailsContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteExamButton"
+            app:layout_constraintTop_toBottomOf="@+id/examCourseNameTextView"
+            tools:text="This exam covers chapters 1-5 of the textbook. Focus on problem-solving and derivations."
+            android:visibility="gone"/>
+
+        <!-- Exam Date, Time, Venue -->
+        <TextView
+            android:id="@+id/examDateTimeVenueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteExamButton"
+            app:layout_constraintTop_toBottomOf="@+id/examDetailsContentTextView"
+            tools:text="Date: 2025-12-15 | From: 09:00 - At: 11:00 (Asia/Kolkata) | Venue: Main Hall" />
+
+        <!-- LinearLayout for Hours Left and Notification Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteExamButton"
+            app:layout_constraintTop_toBottomOf="@+id/examDateTimeVenueTextView">
+
+            <!-- Hours Left -->
+            <TextView
+                android:id="@+id/examHoursLeftTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                tools:text="120.50 hours left" />
+
+            <!-- Exam Notifications Status TextView -->
+            <TextView
+                android:id="@+id/examNotificationsStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                android:layout_marginStart="16dp"
+                android:visibility="visible"
+                tools:text="(Notifications Silenced)"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteExamButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_item_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editExamButton"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/editExamButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_item_description"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deleteExamButton"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Text color when the button is selected (light_gray for contrast with black background) -->
+<!--    <item android:state_selected="true" android:color="@color/black"/>-->
+    <!-- Default text color (white for contrast with purple_500 background) -->
+<!--    <item android:color="@android:color/white"/>-->
+</selector>

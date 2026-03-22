@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/rounded_corners">
+
+    <!-- New Date -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+        android:hint="@string/reschedule_date_hint"
+        app:startIconDrawable="@drawable/ic_calendar"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rescheduleDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Start Time -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+        android:hint="@string/reschedule_time_hint"
+        app:startIconDrawable="@drawable/ic_time"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rescheduleTimeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="time" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- NEW: End Time -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+        android:hint="@string/reschedule_end_time_hint"
+        app:startIconDrawable="@drawable/ic_time"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rescheduleEndTimeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="time" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Optional Notes -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+        android:hint="@string/reschedule_notes_hint"
+        app:startIconDrawable="@drawable/ic_notes"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rescheduleNotesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:gravity="top"
+            android:minLines="2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

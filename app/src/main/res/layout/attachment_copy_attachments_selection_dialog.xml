@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/rounded_corners"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Dialog Title -->
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attachment_string_copy_attachments_dialog_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/rounded_dark_blue_background"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewSelectEventTypePrompt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/attachment_string_select_event_type_prompt"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="italic|bold"/>
+
+    <!-- Event Type Spinner -->
+    <Spinner
+        android:id="@+id/spinnerEventType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectEventTypePrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_corners_no_boundary"/>
+
+    <View
+        android:id="@+id/firstSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEventType"
+        android:elevation="2dp" />
+
+    <TextView
+        android:id="@+id/textViewSelectEventPrompt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/attachment_string_select_event_prompt"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/firstSeparator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="italic|bold"/>
+
+    <Spinner
+        android:id="@+id/spinnerEvents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectEventPrompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_corners_no_boundary"/>
+
+    <View
+        android:id="@+id/secondSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEvents"
+        android:elevation="2dp" />
+
+
+    <!-- Attachments List -->
+    <TextView
+        android:id="@+id/textViewSelectAttachmentsPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/attachment_string_select_attachments_prompt"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/rounded_corners_no_boundary_grey_background"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/secondSeparator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAttachments"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
+        android:background="#DDDEEE"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectAttachmentsPrompt"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCopyAttachments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_max="200dp" />
+
+    <TextView
+        android:id="@+id/noAttachmentsFoundTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/attachment_string_no_attachments_found_for_event"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEvents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/buttonCopyAttachments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attachment_string_copy_selected_attachments"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewAttachments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

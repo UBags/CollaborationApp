@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:background="@drawable/rounded_corners">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_timetable_validity_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:paddingBottom="6dp" />
+
+        <!-- Timetable Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="4dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/timetableNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="@string/dialog_timetable_name_hint"
+                android:autofillHints="name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Start Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/dialog_start_date_hint"
+            app:startIconDrawable="@drawable/ic_calendar"
+            app:startIconTint="@null">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/startDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="date"
+                android:autofillHints="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- End Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/dialog_end_date_hint"
+            app:startIconDrawable="@drawable/ic_calendar"
+            app:startIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/endDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="date"
+                android:autofillHints="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- NEW: Timezone Spinner -->
+        <!-- Timezone Exposed Dropdown Menu -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/timezone_label"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/timezoneAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                tools:ignore="LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Default Notification 1 Offset -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/default_notif_1_offset_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/defaultNotif1OffsetEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:autofillHints="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Default Notification 2 Offset -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/default_notif_2_offset_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/defaultNotif2OffsetEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:autofillHints="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Default Silence Notifications Checkbox -->
+        <CheckBox
+            android:id="@+id/defaultSilenceNotificationsCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/silence_notifications_timetable"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/updateTimetableButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_timetable"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+</ScrollView>

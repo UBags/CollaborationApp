@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="120dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/thumbnail_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/page_thumbnails"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_image_placeholder" /> <!-- Placeholder -->
+
+        <!-- New TextView for the page number label -->
+        <TextView
+            android:id="@+id/thumbnail_page_number_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_1"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <ImageButton
+            android:id="@+id/delete_thumbnail_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_thumbnail_content_description"
+            android:padding="4dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

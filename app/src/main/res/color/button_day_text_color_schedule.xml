@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    &lt;!&ndash; Text color when the button is pressed or selected (black text) &ndash;&gt;-->
+<!--    <item android:state_pressed="true" android:color="@android:color/black"/>-->
+<!--    <item android:state_selected="true" android:color="@android:color/black"/>-->
+<!--    &lt;!&ndash; Default text color (white text) &ndash;&gt;-->
+<!--    <item android:color="@android:color/white"/>-->
+</selector>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Existing colors might be here, keep them -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white1">#FFFFFFFF</color>
+    <color name="light_gray">#DDDDDD</color>
+    <color name="light_yellow">#FFFFC5</color>
+
+    <!-- Custom colors for timetable cells and headers -->
+    <color name="timetable_header_background">#FF6200EE</color> <!-- Using purple_500 for primary light -->
+    <color name="timetable_cell_text_color">#FF6200EE</color> <!-- Using purple_500 for primary -->
+    <color name="timetable_cell_background">#FFFFFFFF</color> <!-- White -->
+    <color name="empty_cell_background">#FFFFFFFF</color> <!-- White -->
+
+    <!-- NEW: Color for timetable header bar -->
+    <color name="dark_blue">#FF00008B</color>
+
+    <!-- NEW: Color for overdue assignments -->
+    <color name="overdue_assignment_red">#EF9A9A</color>
+
+    <!-- NEW: Colors for Exam Tiles -->
+    <color name="light_blue_exam_background">#C4FFFF</color> <!-- Light Blue -->
+
+    <!-- NEW: Colors  for Engagement Tiles (based on CardColor.kt logic)  -->
+    <color name="engagement_overdue_text_red">#680C07</color> <!-- Done -->
+    <color name="engagement_completed_green">#234F1E</color> <!-- Done -->
+    <color name="engagement_in_progress_green">#C6E5A2</color> <!-- Done -->
+    <color name="engagement_nearing_submission_red">#FFD6D7</color> <!-- Done -->
+    <color name="engagement_imminent_yellow">#FFEB3B</color> <!-- Done -->
+    <color name="engagement_upcoming_yellow">#FFF2A6</color> <!-- Done -->
+    <color name="engagement_default_light_dark_blue">#BDEDFF</color> <!-- Done -->
+
+    <!-- NEW: Colors  for Assignment Tiles (based on CardColor.kt logic)  -->
+    <color name="assignment_overdue_red">#680C07</color> <!-- Done -->
+    <color name="assignment_completed_green">#234F1E</color> <!-- Done -->
+    <color name="assignment_in_progress_green">#C6E5A2</color> <!-- Done -->
+    <color name="assignment_nearing_submission_red">#FFD6D7</color> <!-- Done -->
+    <color name="assignment_imminent_yellow">#FFEB3B</color> <!-- Done -->
+    <color name="assignment_upcoming_yellow">#FFF2A6</color> <!-- Done -->
+    <color name="assignment_default_light_dark_blue">#BDEDFF</color> <!-- Done -->
+
+    <!-- NEW: Colors for Exam Tiles (based on CardColor.kt logic)  -->
+    <color name="exam_overdue_text_red">#680C07</color> <!-- Done -->
+    <color name="exam_past_end_green">#234F1E</color> <!-- Done -->
+    <color name="exam_in_progress_green">#C6E5A2</color> <!-- Done -->
+    <color name="exam_about_to_start_light_red">#FFD6D7</color> <!-- Done -->
+    <color name="exam_imminent_yellow">#FFDF22</color> <!-- Done -->
+    <color name="exam_upcoming_yellow">#FFF2A6</color> <!-- Done -->
+    <color name="exam_default_light_dark_blue">#BDEDFF</color> <!-- Done -->
+    <color name="exam_ongoing_text_green">#1A1AFF</color>
+
+    <!-- NEW: Colors  for Action Tiles (based on CardColor.kt logic) -->
+    <color name="action_over_not_done_dark_red">#680C07</color> <!-- Done -->
+    <color name="action_completed_green">#234F1E</color> <!-- Done -->
+    <color name="action_in_progress_green">#C6E5A2</color> <!-- Done -->
+    <color name="action_about_to_start_light_red">#FFD6D7</color> <!-- Done -->
+    <color name="action_imminent_yellow">#FFDF22</color> <!-- Done -->
+    <color name="action_upcoming_yellow">#FFF2A6</color> <!-- Done -->
+    <color name="action_default_light_dark_blue">#BDEDFF</color> <!-- Done -->
+
+    <!-- NEW: Colors for NoteItem Tiles (based on CardColor.kt logic) -->
+    <color name="notes_default_blue">#E3F2FD</color> <!-- Done -->
+    <color name="notes_old_red">#FFD6D7</color> <!-- Done -->
+    <color name="notes_medium_old_dark_yellow">#FFDF22</color> <!-- Done -->
+    <color name="notes_medium_old_light_yellow">#FFF2A6</color> <!-- Done -->
+    <color name="notes_reasonably_recent_light_green">#C6E5A2</color> <!-- Done -->
+    <color name="notes_very_recent_dark_green">#3E968A</color> <!-- Done -->
+    <color name="notes_archived_dark_green">#234F1E</color> <!-- Darker shade of green, same as action_past_end_green -->
+
+    <!-- NEW: Colors for ToDo Tiles (based on CardColor.kt logic) -->
+    <color name="todo_very_old_dark_red">#680C07</color> <!-- Done -->
+    <color name="todo_completed_dark_green">#234F1E</color>  <!-- Done -->
+    <color name="todo_old_light_red">#FFD6D7</color> <!-- Done -->
+    <color name="todo_medium_old_dark_yellow">#FFDF22</color> <!-- Done -->
+    <color name="todo_medium_old_light_yellow">#FFF2A6</color> <!-- Done -->
+    <color name="todo_new_light_green">#C6E5A2</color> <!-- Done -->
+
+    <!-- NEW: Colors for ToDo Tiles (based on CardColor.kt logic) -->
+    <color name="dialog_background_light_grey">#BBBBBB</color>  <!-- Done -->
+    <color name="google_task_blue">#E3F2FD</color>  <!-- Done -->
+
+</resources>

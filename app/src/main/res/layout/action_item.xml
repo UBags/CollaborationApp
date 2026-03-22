@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actionCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- Action Name -->
+        <TextView
+            android:id="@+id/actionNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/attachmentIconImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Project Deadline" />
+
+        <!-- Attachment Icon -->
+        <ImageView
+            android:id="@+id/attachmentIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_attach_file"
+            android:contentDescription="@string/attachment_icon_description"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/deleteActionButton"
+            app:layout_constraintTop_toTopOf="@+id/actionNameTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/actionNameTextView" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/actionNameTextView"
+            tools:text="Description: Final submission for the Q3 marketing project." />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/venueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+            tools:text="Venue: L3" />
+
+        <!-- Start Date & Time and End Date & Time combined -->
+        <TextView
+            android:id="@+id/dateTimeInfoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="11sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/venueTextView"
+            tools:text="Start: 2024-08-01 09:00 End: 2024-08-01 10:00" />
+
+        <!-- NEW: Done Checkbox -->
+        <CheckBox
+            android:id="@+id/doneActionCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_done"
+            android:textSize="11sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:minHeight="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTimeInfoTextView" />
+
+        <!-- Notifications -->
+        <TextView
+            android:id="@+id/notificationInfoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/doneActionCheckBox"
+            tools:text="Notifications: 30 | 15" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_item_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editActionButton"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/editActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_item_description"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deleteActionButton"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

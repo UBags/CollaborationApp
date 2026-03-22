@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    &lt;!&ndash; Selected state: Black background &ndash;&gt;-->
+<!--    <item android:state_selected="true" android:color="@android:color/black"/>-->
+<!--    &lt;!&ndash; Default state: purple_500 background &ndash;&gt;-->
+<!--    <item android:color="@color/purple_500"/>-->
+</selector>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strings for Audio Recording Component -->
+    <string name="component_audio_ready_to_record">Ready to Record</string>
+    <string name="component_audio_transcription_will_appear_here">Transcription will appear here...</string>
+    <string name="component_audio_start_recording">Start</string>
+    <string name="component_audio_pause">Pause</string>
+    <string name="component_audio_stop_recording">Stop</string>
+    <string name="component_audio_audio_recording_complete">Audio Recording Complete</string>
+    <string name="component_audio_transcription_preview">Transcription Preview:</string>
+    <string name="component_audio_no_transcription_available">No transcription available.</string>
+    <string name="component_audio_play_audio">Play Audio</string>
+    <string name="component_audio_stop_playback">Stop Playback</string>
+    <string name="component_audio_listening_prompt">Listening...</string>
+    <string name="component_audio_speaking_prompt">Speaking...</string>
+    <string name="component_audio_recording_prompt">Recording...</string>
+    <string name="component_audio_processing_prompt">Processing...</string>
+    <string name="component_audio_error_message_while_recording">Error: %1$s</string>
+    <string name="component_audio_transcription_partial_result">%1$s</string>
+    <string name="component_audio_recording_paused">Paused</string>
+    <string name="component_audio_resume_recording">Resume</string>
+    <string name="component_audio_recording_now">Recording...</string>
+    <string name="component_audio_time_00_00">00:00</string>
+    <string name="component_audio_audio_note_discarded">Audio note discarded.</string>
+    <string name="component_audio_error_starting_recording">Failed to start audio recording: %1$s</string>
+    <string name="component_audio_error_pausing_recording">Failed to pause recording: %1$s</string>
+    <string name="component_audio_error_resuming_recording">Failed to resume recording: %1$s</string>
+    <string name="component_audio_error_stopping_recording">Error stopping recording. Recording might be too short.</string>
+    <string name="component_audio_error_playing_audio">Error playing audio: %1$s</string>
+    <string name="component_audio_permission_denied_message">Permission denied. Cannot perform this action.</string>
+    <string name="component_audio_file_creation_error">Error creating file: %1$s</string>
+    <string name="component_audio_audio_recording_started">Audio recording started...</string>
+    <string name="component_audio_already_recording">Already recording audio.</string>
+    <string name="component_audio_recording_paused_toast">Recording paused.</string>
+    <string name="component_audio_recording_resumed_toast">Recording resumed.</string>
+    <string name="component_audio_save_audio_note_title">Save Audio Note?</string>
+    <string name="component_audio_save_audio_note_message">Do you want to save this audio note?</string>
+    <string name="component_audio_error_setting_up_playback">Error setting up audio playback.</string>
+    <string name="component_audio_audio_playback_error">Audio playback error.</string>
+    <string name="component_audio_audio_playback_started">Audio playback started.</string>
+    <string name="component_audio_audio_playback_completed">Audio playback completed.</string>
+    <string name="component_audio_audio_playback_stopped">Audio playback stopped.</string>
+    <string name="component_audio_no_audio_file_found">No audio file found to save.</string>
+    <string name="component_audio_save_success">Audio note saved successfully.</string>
+    <string name="component_audio_save_failure">Failed to save audio note: %1$s</string>
+    <string name="component_audio_audio_note_default_name">Audio Note %1$s</string>
+    <string name="component_audio_speech_recognizer_error_audio">Audio recording error</string>
+    <string name="component_audio_speech_recognizer_error_client">Client side error</string>
+    <string name="component_audio_speech_recognizer_error_insufficient_permissions">Insufficient permissions</string>
+    <string name="component_audio_speech_recognizer_error_network">Network error</string>
+    <string name="component_audio_speech_recognizer_error_network_timeout">Network timeout</string>
+    <string name="component_audio_speech_recognizer_error_no_match">No match found</string>
+    <string name="component_audio_speech_recognizer_error_recognizer_busy">Recognition service busy</string>
+    <string name="component_audio_speech_recognizer_error_server">Server error</string>
+    <string name="component_audio_speech_recognizer_error_speech_timeout">No speech input</string>
+    <string name="component_audio_speech_recognizer_error_unknown">Unknown speech recognition error</string>
+</resources>

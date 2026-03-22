@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/todoCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- To-Do Title -->
+        <TextView
+            android:id="@+id/todoTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/attachmentIconImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Buy Groceries" />
+
+        <!-- Attachment Icon -->
+        <ImageView
+            android:id="@+id/attachmentIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_attach_file"
+            android:contentDescription="@string/attachment_icon_description"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/todoTitleTextView"
+            app:layout_constraintEnd_toStartOf="@+id/deleteTodoButton"
+            app:layout_constraintTop_toTopOf="@+id/todoTitleTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/todoTitleTextView"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0" />
+
+
+        <!-- To-Do Description (Optional) -->
+        <TextView
+            android:id="@+id/todoDescriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteTodoButton"
+            app:layout_constraintTop_toBottomOf="@+id/todoTitleTextView"
+            tools:text="Milk, Eggs, Bread, and Cheese" />
+
+        <!-- Due Date & Time (Main Display) -->
+        <LinearLayout
+            android:id="@+id/dueDateTimeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteTodoButton"
+            app:layout_constraintTop_toBottomOf="@+id/todoDescriptionTextView">
+
+            <TextView
+                android:id="@+id/todoDueDateTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                tools:text="Due: 2025-07-20 at 17:00" />
+
+            <TextView
+                android:id="@+id/todoDueDateTimeTimezoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                tools:text="(IST)" />
+        </LinearLayout>
+
+        <!-- Priority (Optional) -->
+        <LinearLayout
+            android:id="@+id/priorityAndNotificationLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteTodoButton"
+            app:layout_constraintTop_toBottomOf="@+id/dueDateTimeLayout">
+
+            <TextView
+                android:id="@+id/todoPriorityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                tools:text="Priority: High" />
+
+            <TextView
+                android:id="@+id/todoNotificationsStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_marginStart="8dp"
+                android:textStyle="italic"
+                android:textColor="@android:color/darker_gray"
+                android:visibility="visible"
+                tools:text="(Notifications Silenced)" />
+        </LinearLayout>
+
+
+        <!-- Completion Status (Checkbox) -->
+        <CheckBox
+            android:id="@+id/todoCompletedCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todo_is_completed_label"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:minHeight="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priorityAndNotificationLayout" />
+
+        <!-- Creation Date -->
+        <TextView
+            android:id="@+id/todoCreationDateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteTodoButton"
+            app:layout_constraintTop_toBottomOf="@+id/todoCompletedCheckbox"
+            tools:text="Created: 2025-07-18" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteTodoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_item_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editTodoButton"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/editTodoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_item_description"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deleteTodoButton"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

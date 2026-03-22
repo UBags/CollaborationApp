@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="timetable_cell_width">250dp</dimen>
+    <dimen name="timetable_cell_height">225dp</dimen> <!-- Increased height to accommodate checkbox text -->
+    <dimen name="small_margin">4dp</dimen>
+    <dimen name="image_preview_height">200dp</dimen>
+    <dimen name="image_preview_margin_top">8dp</dimen>
+    <dimen name="fab_margin_end">48dp</dimen>
+    <dimen name="fab_margin_bottom">48dp</dimen>
+</resources>

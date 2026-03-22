@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/engagementCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- Engagement Name -->
+        <TextView
+            android:id="@+id/engagementNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/attachmentIconImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Weekly Team Sync" />
+
+        <!-- Attachment Icon -->
+        <ImageView
+            android:id="@+id/attachmentIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_attach_file"
+            android:contentDescription="@string/attachment_icon_description"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/cancelInstanceButton"
+            app:layout_constraintTop_toTopOf="@+id/engagementNameTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/engagementNameTextView"
+            tools:visibility="visible"/>
+
+        <!-- Notes -->
+        <TextView
+            android:id="@+id/notesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cancelInstanceButton"
+            app:layout_constraintTop_toBottomOf="@+id/engagementNameTextView"
+            tools:text="Notes: Discuss Q3 roadmap and blockers." />
+
+        <!-- Venue -->
+        <TextView
+            android:id="@+id/venueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cancelInstanceButton"
+            app:layout_constraintTop_toBottomOf="@+id/notesTextView"
+            tools:text="Venue: Conference Room 4B" />
+
+        <!-- Date & Time Info -->
+        <TextView
+            android:id="@+id/dateTimeInfoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cancelInstanceButton"
+            app:layout_constraintTop_toBottomOf="@+id/venueTextView"
+            tools:text="Aug 15, 2025\n10:00 - 11:00" />
+
+        <!-- Notifications -->
+        <TextView
+            android:id="@+id/notificationInfoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cancelInstanceButton"
+            app:layout_constraintTop_toBottomOf="@+id/dateTimeInfoTextView"
+            tools:text="Notifications: 60m | 30m | 10m" />
+
+        <!-- Action Buttons -->
+        <!-- Cancel Instance Button -->
+        <ImageButton
+            android:id="@+id/cancelInstanceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cancel_session_instance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/rescheduleInstanceButton"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Reschedule Instance Button -->
+        <ImageButton
+            android:id="@+id/rescheduleInstanceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_reschedule"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/reschedule_instance"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cancelInstanceButton"
+            app:layout_constraintBottom_toTopOf="@+id/deleteEngagementButton"/>
+
+        <!-- Delete Engagement Button -->
+        <ImageButton
+            android:id="@+id/deleteEngagementButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_item_description"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rescheduleInstanceButton"
+            app:layout_constraintBottom_toTopOf="@+id/editEngagementButton" />
+
+        <!-- Edit Engagement Button -->
+        <ImageButton
+            android:id="@+id/editEngagementButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_item_description"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deleteEngagementButton"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

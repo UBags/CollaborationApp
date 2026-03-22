@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".exam.AddExamActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/addExamTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_exam_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_dark_green_background"/>
+
+        <!-- Course Name (AutoCompleteTextView) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp">
+            <AutoCompleteTextView
+                android:id="@+id/examCourseNameAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:autofillHints="name"
+                android:completionThreshold="1"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:hint="@string/exam_course_name_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- NEW: Exam Details (Multi-line EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginBottom="2dp"
+            app:startIconDrawable="@drawable/ic_notes"
+            app:startIconTint="@null">
+            <EditText
+                android:id="@+id/examDetailsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/exam_details_hint"
+                android:hint="@string/exam_details_hint"
+                android:inputType="textMultiLine|textCapSentences"
+                android:lines="3"
+                android:minLines="3"
+                android:maxLines="5"
+                android:gravity="top|start"
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:completionThreshold="1"
+                android:scrollbars="vertical" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+        <!-- Exam Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="4dp"
+                app:startIconDrawable="@drawable/ic_calendar"
+                app:startIconTint="@null">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/examDateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:hint="@string/exam_date_hint"
+                    android:inputType="none"
+                    android:textSize="11sp"
+                    android:minHeight="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Start Time -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="4dp"
+                app:startIconDrawable="@drawable/ic_time"
+                app:startIconTint="@null">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/examStartTimeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:hint="@string/exam_start_time_hint"
+                    android:inputType="none"
+                    android:textSize="11sp"
+                    android:minHeight="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- End Time -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                android:layout_marginBottom="4dp"
+                app:startIconDrawable="@drawable/ic_time"
+                app:startIconTint="@null">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/examEndTimeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:hint="@string/exam_end_time_hint"
+                    android:inputType="none"
+                    android:textSize="11sp"
+                    android:minHeight="0dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- TIMEZONE CHANGE: Timezone Display Layout -->
+        <LinearLayout
+            android:id="@+id/timezoneInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/currentTimezoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textSize="11sp"
+                tools:text="Time: 08:00 (07-Aug-2025) in current timezone: America/New_York"
+                tools:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/originalTimezoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textSize="11sp"
+                tools:text="Time: 17:30 (07-Aug-2025) in original timezone: Asia/Kolkata"/>
+        </LinearLayout>
+
+        <!-- Venue - Now using LocationPickerView -->
+        <com.costheta.cortexa.util.location.LocationPickerView
+            android:id="@+id/examLocationPickerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Original Venue EditText (kept for fuzzy search integration if needed, but will be populated by LocationPickerView) -->
+        <!-- This is kept hidden if LocationPickerView is the primary input for venue -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp">
+            <AutoCompleteTextView
+                android:id="@+id/examVenueEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:hint="@string/exam_venue_hint"
+                android:autofillHints="location" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- NEW: CheckBox for Silence Notifications -->
+        <CheckBox
+            android:id="@+id/silenceNotificationsCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/silence_notifications_checkbox_exam"
+            android:textSize="11sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Include the new attachment layout here -->
+        <include layout="@layout/attachment_layout"
+            android:id="@+id/attachmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- NEW: Include the subtasks layout here -->
+        <include layout="@layout/subtasks_layout"
+            android:id="@+id/subtasksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Save Exam Button -->
+        <Button
+            android:id="@+id/saveExamButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exam_save_button_text" />
+
+    </LinearLayout>
+</ScrollView>

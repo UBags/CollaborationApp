@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:text="@string/app_preferences"
+            android:textAppearance="?attr/textAppearanceHeadline5" />
+
+        <!-- Notification Defaults -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/notification_defaults"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <!-- Timetable Notifications -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_timetable"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_dark_blue_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="4dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_timetable_notification_1_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefTimetableNotif1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_timetable_notification_2_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefTimetableNotif2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Engagement Notifications -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_engagement"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_dark_blue_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/notification_1_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefEngagementNotif1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/notification_2_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefEngagementNotif2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/notification_3_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefEngagementNotif3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Notifications -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_action"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_dark_blue_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/notification_1_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefActionNotif1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/notification_2_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefActionNotif2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/notification_3_mins_before" />
+                    <NumberPicker
+                        android:id="@+id/prefActionNotif3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Assignment Notifications -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_assignment"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_dark_blue_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp" />
+                <CheckBox android:id="@+id/prefAssignNotif3Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_3_days_before"/>
+                <CheckBox android:id="@+id/prefAssignNotif2Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_2_days_before"/>
+                <CheckBox android:id="@+id/prefAssignNotif1Day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_1_day_before"/>
+                <CheckBox android:id="@+id/prefAssignNotif12Hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_12_hours_before"/>
+                <CheckBox android:id="@+id/prefAssignNotif6Hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_6_hours_before"/>
+                <CheckBox android:id="@+id/prefAssignNotif3Hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_3_hours_before"/>
+                <CheckBox android:id="@+id/prefAssignNotif1Hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_1_hour_before"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Exam Notifications -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_exam"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_dark_blue_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp" />
+                <CheckBox android:id="@+id/prefExamNotif5Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_5_days_before"/>
+                <CheckBox android:id="@+id/prefExamNotif3Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_3_days_before"/>
+                <CheckBox android:id="@+id/prefExamNotif1Day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_1_day_before"/>
+                <CheckBox android:id="@+id/prefExamNotif12Hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_12_hours_before"/>
+                <CheckBox android:id="@+id/prefExamNotif6Hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_6_hours_before"/>
+                <CheckBox android:id="@+id/prefExamNotif3Hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_3_hours_before"/>
+                <CheckBox android:id="@+id/prefExamNotif1Hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_1_hour_before"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ToDo Notifications -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_to_do"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_dark_blue_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp" />
+                <CheckBox android:id="@+id/prefTodoNotif30Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_30_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif25Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_25_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif20Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_20_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif15Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_15_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif10Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_10_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif7Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_7_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif5Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_5_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif3Days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_3_days_before"/>
+                <CheckBox android:id="@+id/prefTodoNotif1Day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_1_day_before"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Auto-Deletion Defaults -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/auto_deletion_defaults"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/rounded_dark_blue_background"
+            android:padding="4dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="6dp"  />
+
+        <!-- Timetable Auto-Deletion -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_timetable"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_corners_no_boundary_grey_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp"  />
+                <CheckBox
+                    android:id="@+id/prefTimetableAutoArchive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/archive_automatically_after_end_validity_date" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Other Auto-Deletion Types -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:contentPadding="16dp"
+            tools:ignore="TooManyViews">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/completed_items_days_after_completion"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_corners_no_boundary_grey_background"
+                    android:padding="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="6dp"  />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_engagement"
+                        android:textSize="24sp"/>
+                    <NumberPicker
+                        android:id="@+id/prefEngagementAutoDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="TooManyViews" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_action"
+                        android:textSize="24sp"/>
+                    <NumberPicker
+                        android:id="@+id/prefActionAutoDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_assignment"
+                        android:textSize="24sp"/>
+                    <NumberPicker
+                        android:id="@+id/prefAssignmentAutoDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_exam"
+                        android:textSize="24sp"/>
+                    <NumberPicker
+                        android:id="@+id/prefExamAutoDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_to_do"
+                        android:textSize="24sp"/>
+                    <NumberPicker
+                        android:id="@+id/prefTodoAutoDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:elevation="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_notes"
+                        android:textSize="24sp"/>
+                    <NumberPicker
+                        android:id="@+id/prefNotesAutoDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/savePreferencesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:text="@string/save_preferences" />
+
+    </LinearLayout>
+</ScrollView>

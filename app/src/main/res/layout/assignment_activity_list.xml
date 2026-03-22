@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".assignment.AssignmentListActivity"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/assignmentListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/assignments_title"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_dark_green_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Search Bar for Assignments - Changed to FuzzyAutoCompleteTextView within TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchAssignmentsInputLayout"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/search_assignments_hint"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@null"
+        app:endIconMode="clear_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assignmentListTitle">
+
+        <com.costheta.cortexa.util.autofill.FuzzyAutoCompleteTextView
+            android:id="@+id/editTextSearchAssignments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- RecyclerView to display the list of assignments -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assignmentsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchAssignmentsInputLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/assignment_item" />
+
+    <TextView
+        android:id="@+id/noAssignmentsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_assignments_found"
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Floating Action Button for adding new assignments -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addAssignmentFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/add_assignment_fab_description"
+        app:srcCompat="@drawable/ic_add"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="655dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_see_schedule"
+        android:icon="@drawable/ic_menu_schedule"
+        android:title="@string/menu_see_schedule"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_delete_archived"
+        android:icon="@drawable/ic_menu_delete_archive"
+        android:title="@string/menu_delete_archived_timetables"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_set_preferences"
+        android:icon="@drawable/ic_menu_settings"
+        android:title="Set Preferences"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_my_profile"
+        android:icon="@drawable/ic_menu_profile"
+        android:title="@string/menu_my_profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@drawable/ic_menu_help"
+        android:title="@string/menu_help"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_images_to_pdf"
+        android:icon="@drawable/ic_menu_images_to_pdf"
+        android:title="@string/menu_images_to_pdf"
+        app:showAsAction="never" />
+
+</menu>

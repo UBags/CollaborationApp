@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:context="cortexa.util.image2pdf.ImageToPdfActivity"
+    android:background="@drawable/rounded_corners">
+
+    <TextView
+        android:id="@+id/header_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/click_picture_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/rounded_dark_blue_background"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Main Image Canvas (QuadrilateralImageView) - Occupying ~70% height -->
+    <FrameLayout
+        android:id="@+id/main_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:background="#EEE"
+        android:layout_marginBottom="4dp">
+
+        <com.costheta.cortexa.util.image2pdf.QuadrilateralImageView
+            android:id="@+id/quadrilateral_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_image_placeholder"
+            android:background="@drawable/rounded_corners_no_boundary"/>
+
+        <!-- You might want to overlay a loading spinner or message here when camera is launching -->
+
+    </FrameLayout>
+
+    <!-- Buttons: "Add Page" / "Save Page" and "Save PDF" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corners">
+
+        <Button
+            android:id="@+id/add_save_page_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:text="@string/button_add_page"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/save_pdf_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/button_save_pdf"
+            android:layout_marginStart="4dp"
+            android:enabled="false"/> <!-- Initially disabled -->
+
+    </LinearLayout>
+
+    <!-- Checkbox for "Apply document-style transform" -->
+    <CheckBox
+        android:id="@+id/apply_document_transform_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apply_document_style_transform"
+        android:checked="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Horizontal ScrollView / RecyclerView for Image Thumbnails -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/thumbnails_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="horizontal"
+        tools:listitem="@layout/i2pdf_image_thumbnail_item"
+        android:background="#F0F0F0"
+        android:padding="4dp"/>
+
+</LinearLayout>

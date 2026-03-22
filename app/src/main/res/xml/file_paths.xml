@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <external-files-path name="my_images" path="Pictures" />
+    <external-files-path name="my_videos" path="Movies" />
+    <external-files-path name="my_audio" path="Audio" />
+    <external-files-path name="my_documents" path="Documents" />
+    <external-files-path name="root_external_files" path="" />
+
+    <!-- Expose files from getExternalFilesDir(null) and its immediate subdirectories.
+     The 'path' attribute is relative to the directory represented by the element type.
+     For <external-files-path>, it's relative to context.getExternalFilesDir(null).
+-->
+
+    <!-- This covers the base 'files' directory if you store files directly there -->
+    <external-files-path name="app_root_files" path="."/>
+
+    <!-- Explicitly expose subdirectories used for temporary media files.
+         These paths are relative to getExternalFilesDir(null).
+         e.g., getExternalFilesDir(null)/Music/
+    -->
+    <external-files-path name="app_music_files" path="Music/"/>
+    <external-files-path name="app_pictures_files" path="Pictures/"/>
+    <external-files-path name="app_movies_files" path="Movies/"/>
+
+    <!-- If you also use cache directories for temporary files, you might need: -->
+    <!-- <external-cache-path name="cache_files" path="."/> -->
+
+    <!-- If you store files in internal storage (getFilesDir()), you might need: -->
+    <!-- <files-path name="internal_files" path="."/> -->
+
+    <!-- Define paths for files stored in your app's internal files directory.
+     While your current code primarily uses external files, this is good practice to include
+     if you might store files internally.
+-->
+    <files-path name="my_internal_files" path="." />
+
+    <!-- If you ever need to share files from the cache directory -->
+    <cache-path name="my_cache_files" path="." />
+
+    <!-- If you need to share files from the external cache directory -->
+    <external-cache-path name="my_external_cache_files" path="." />
+
+    <!-- If you need to share files from the root of external storage (less common and requires broader permissions) -->
+    <!-- <external-path name="external_storage_root" path="." /> -->
+
+</paths>

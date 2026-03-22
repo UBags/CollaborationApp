@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style for the day selection buttons -->
+    <!-- Parent changed to a MaterialComponents button widget for compatibility with Material3 theme -->
+<!--    <style name="DayButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">-->
+<!--        <item name="android:background">@drawable/button_day_selector</item>-->
+<!--        <item name="android:textColor">@color/button_day_text_color</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        &lt;!&ndash; Remove padding added by default Material buttons if needed, or adjust &ndash;&gt;-->
+<!--        <item name="android:paddingTop">0dp</item>-->
+<!--        <item name="android:paddingBottom">0dp</item>-->
+<!--        <item name="android:paddingStart">0dp</item>-->
+<!--        <item name="android:paddingEnd">0dp</item>-->
+<!--    </style>-->
+
+    <!-- NEW: Style for Schedule day selection buttons -->
+    <style name="ScheduleDayButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <!-- Using app:backgroundTint for Material Buttons to handle background state changes -->
+        <!-- <item name="app:backgroundTint">@color/button_day_background_tint_selector</item>-->
+        <!-- Set corner radius directly via app:cornerRadius for Material Buttons -->
+        <!-- <item name="app:cornerRadius">8dp</item>-->
+        <!--  <item name="android:textColor">@color/button_day_text_color_selector</item> &lt;!&ndash; References the new color selector &ndash;&gt;-->
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+    <!-- NEW: Style for AlertDialog buttons to force ALL CAPS -->
+    <style name="AlertDialogButtonAllCaps" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item> <!-- Set your desired corner radius here -->
+    </style>
+
+</resources>
