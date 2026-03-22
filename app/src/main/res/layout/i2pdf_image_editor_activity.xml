@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="cortexa.util.image2pdf.ImageEditorActivity"
+    tools:context="com.costheta.cortexa.util.image2pdf.ImageEditorActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="16dp"
     app:cardElevation="12dp">

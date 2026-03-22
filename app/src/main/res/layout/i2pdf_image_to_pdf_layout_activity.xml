@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="4dp"
-    tools:context="cortexa.util.image2pdf.ImageToPdfActivity"
+    tools:context="com.costheta.cortexa.util.image2pdf.ImageToPdfActivity"
     android:background="@drawable/rounded_corners">
 
     <TextView

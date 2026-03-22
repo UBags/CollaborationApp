@@ -5,7 +5,7 @@
     <external-files-path name="my_videos" path="Movies" />
     <external-files-path name="my_audio" path="Audio" />
     <external-files-path name="my_documents" path="Documents" />
-    <external-files-path name="root_external_files" path="" />
+    <external-files-path name="root_external_files" path="Documents" />
 
     <!-- Expose files from getExternalFilesDir(null) and its immediate subdirectories.
      The 'path' attribute is relative to the directory represented by the element type.
