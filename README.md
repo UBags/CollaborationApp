@@ -1,6 +1,8 @@
 # 📅 Cortexa — Academic Life, Organized
 
-> **A feature-rich Android timetable & productivity app for students**, integrating Google Calendar, Google Tasks, multi-cloud storage, smart notifications, and a full academic management suite — all stored locally with Room and synced in the background.
+> **A feature-rich Android timetable & productivity app for students**, integrating Google Calendar, Google Tasks, multi-cloud storage, smart notifications, and a full academic management suite — all stored locally with Room and synced in the background. An app with notifications for students to **track Classes, Assignments, Notes, Exams, ToDo's, Actions, and Ad-hoc engagements with repetition**. Allows **multiple attachments, observations, activity breakdowns, etc. for each of these**.
+
+24000 lines of kotlin code and 9000 lines of xml's.
 
 ---
 
