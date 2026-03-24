@@ -33,8 +33,7 @@ Cortexa is not a simple scheduler. It's a complete academic operating system:
 | 🧹 **Auto Cleanup** | Configurable background purge of old data |
 | 🌗 **Dark Mode** | Full Material 3 day/night theming |
 
-![1000317692](https://github.com/user-attachments/assets/bfcf35f4-81af-41e3-a84e-f0ab0b933844)
-
+<img src="https://github.com/user-attachments/assets/bfcf35f4-81af-41e3-a84e-f0ab0b933844" width="30%"/>
 ---
 
 ## 📸 Architecture at a Glance
@@ -81,7 +80,7 @@ com.costheta.cortexa
     ├── ui/                    # CardColor theming utilities
     └── uirefresh/             # PeriodicallyRefreshAppCompatActivity
 ```
-![1000317694](https://github.com/user-attachments/assets/74775319-8b79-4fe0-9853-4c1aa8fb2055)
+<img src="https://github.com/user-attachments/assets/74775319-8b79-4fe0-9853-4c1aa8fb2055" width="30%"/>
 
 ---
 
@@ -168,7 +167,7 @@ synced_google_tasks
   isCompleted, parentTaskId, lastSyncedTimestamp
 ```
 
-![1000317695](https://github.com/user-attachments/assets/b6ac804c-9418-4712-8020-25978ab7ec12)
+<img src="https://github.com/user-attachments/assets/b6ac804c-9418-4712-8020-25978ab7ec12" width="30%"/>
 
 ---
 
@@ -198,7 +197,7 @@ synced_google_tasks
 4. Sign-out clears credentials and cancels all scheduled syncs.
 
 ---
-![1000317696](https://github.com/user-attachments/assets/bfcd99ff-4c42-41a1-bde7-523558e28043)
+<img src="https://github.com/user-attachments/assets/bfcd99ff-4c42-41a1-bde7-523558e28043" width="30%"/>
 
 ## 📥 CSV Timetable Import
 
@@ -323,7 +322,8 @@ All thresholds are configurable from `PreferencesActivity`.
 
 ---
 
-![1000317697](https://github.com/user-attachments/assets/4b9036b2-e3ea-45ac-bc11-fb94387878ba)
+<img src="https://github.com/user-attachments/assets/4b9036b2-e3ea-45ac-bc11-fb94387878ba" width="30%"/>
+
 
 ## ⚙️ Tech Stack
 
