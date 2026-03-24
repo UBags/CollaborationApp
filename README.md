@@ -6,12 +6,7 @@
 >
 > **Copyright (c) 2025 Uddipan Bagchi. All rights reserved.**
 > **See LICENSE in the project root for license information.**
-
-![1000317697](https://github.com/user-attachments/assets/4b9036b2-e3ea-45ac-bc11-fb94387878ba)
-![1000317692](https://github.com/user-attachments/assets/bfcf35f4-81af-41e3-a84e-f0ab0b933844)
-![1000317695](https://github.com/user-attachments/assets/b6ac804c-9418-4712-8020-25978ab7ec12)
-![1000317694](https://github.com/user-attachments/assets/74775319-8b79-4fe0-9853-4c1aa8fb2055)
-![1000317696](https://github.com/user-attachments/assets/bfcd99ff-4c42-41a1-bde7-523558e28043)
+![1000317691](https://github.com/user-attachments/assets/a5f19049-4ecb-4d0d-99a0-0bb8bc4d93c9)
 
 ---
 
@@ -37,6 +32,8 @@ Cortexa is not a simple scheduler. It's a complete academic operating system:
 | ✔️ **Google Tasks Sync** | Background sync via WorkManager (every 4 hours) |
 | 🧹 **Auto Cleanup** | Configurable background purge of old data |
 | 🌗 **Dark Mode** | Full Material 3 day/night theming |
+
+![1000317692](https://github.com/user-attachments/assets/bfcf35f4-81af-41e3-a84e-f0ab0b933844)
 
 ---
 
@@ -84,6 +81,7 @@ com.costheta.cortexa
     ├── ui/                    # CardColor theming utilities
     └── uirefresh/             # PeriodicallyRefreshAppCompatActivity
 ```
+![1000317694](https://github.com/user-attachments/assets/74775319-8b79-4fe0-9853-4c1aa8fb2055)
 
 ---
 
@@ -170,6 +168,8 @@ synced_google_tasks
   isCompleted, parentTaskId, lastSyncedTimestamp
 ```
 
+![1000317695](https://github.com/user-attachments/assets/b6ac804c-9418-4712-8020-25978ab7ec12)
+
 ---
 
 ## 📆 Google Integration
@@ -198,6 +198,7 @@ synced_google_tasks
 4. Sign-out clears credentials and cancels all scheduled syncs.
 
 ---
+![1000317696](https://github.com/user-attachments/assets/bfcd99ff-4c42-41a1-bde7-523558e28043)
 
 ## 📥 CSV Timetable Import
 
@@ -321,6 +322,8 @@ Both support:
 All thresholds are configurable from `PreferencesActivity`.
 
 ---
+
+![1000317697](https://github.com/user-attachments/assets/4b9036b2-e3ea-45ac-bc11-fb94387878ba)
 
 ## ⚙️ Tech Stack
 
