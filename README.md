@@ -6,7 +6,7 @@
 >
 > **Copyright (c) 2025 Uddipan Bagchi. All rights reserved.**
 > **See LICENSE in the project root for license information.**
-![1000317691](https://github.com/user-attachments/assets/a5f19049-4ecb-4d0d-99a0-0bb8bc4d93c9)
+<img src="https://github.com/user-attachments/assets/a5f19049-4ecb-4d0d-99a0-0bb8bc4d93c9" width="30%"/>
 
 ---
 
